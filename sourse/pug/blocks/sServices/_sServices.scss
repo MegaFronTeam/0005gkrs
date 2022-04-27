@@ -1,0 +1,95 @@
+// start .sServices
+.sServices {
+	--sPT: #{rem(25)};
+	--sPB: #{rem(25)};
+	text-align: center;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(50)};
+		--sPB: #{rem(50)};
+	}
+	// --sTPB: ;
+	&__row {
+		--bs-gutter-y: #{rem(30)};
+	}
+	.section-title {
+		margin-bottom: rem(25);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(50);
+		}
+		h2 {
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(30);
+			}
+		}
+		span {
+			color: $blue;
+		}
+		p {
+			color: $info;
+			margin-bottom: 0;
+		}
+	}
+	.tabs {
+		margin-bottom: rem(49);
+		&__caption {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: rem(30);
+			margin-bottom: rem(25);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(50);
+			}
+		}
+		&__btn {
+			@include mt;
+			color: $info;
+			padding-bottom: rem(11);
+			border-bottom: 3px solid $white;
+			&.active, &:hover {
+				color: $dark;
+				border-bottom-color: $blue;
+			}
+			h5 {
+				margin-bottom: 0;
+			}
+		}
+		&__content {
+			text-align: center;
+		}
+	}
+	&__wrap {
+		background-color: $white;
+		border-radius: 8px;
+		padding: rem(31) rem(35);
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		img {
+			margin-bottom: auto;
+		}
+		p {
+			margin-bottom: 0;
+			font-size: rem(16);
+			font-weight: 500;
+			margin-top: rem(5);
+			span {
+				font-weight: 800;
+				color: $blue;
+			}
+		}
+	}
+	&__title {
+		font-weight: 800;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sServices

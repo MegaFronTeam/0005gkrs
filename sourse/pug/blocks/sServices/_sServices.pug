@@ -1,0 +1,85 @@
+mixin sServices(title, btn)
+	// start sServices
+	+b.SECTION.sServices.section#sServices&attributes(attributes)
+		.container
+			if title 
+				+b.section-title.text-center
+					h2 Мы занимаемся организацией похорон #[span более 10 лет]
+					p и предусматриваем каждую деталь
+			.tabs
+				.tabs__caption
+					.tabs__btn.active
+						h5 Погребение
+					.tabs__btn
+						h5 Кремация
+					.tabs__btn
+						h5 Организация похорон
+					.tabs__btn
+						h5 Другие услуги
+				.tabs__content.active
+					+e.row.row.justify-content-center
+						mixin tabItem(i, title, text)
+							.col-sm-6.col-md-4.col-lg-3
+								+e.wrap
+									+img(`img/svg/sServices-icon-${i}.svg`)
+									+e.title!= title
+									if text
+										p Цена от #[span 000] руб.
+						+tabItem('1', 'Организация погребения', 'true')
+						+tabItem('2', 'Место на кладбище', 'true')
+						+tabItem('3', 'Рытье могилы', 'true')
+						+tabItem('4', 'Родовое захоронение', 'true')
+						+tabItem('5', 'Необходимые документы', 'true')
+						+tabItem('6', 'Кладбища<br>Санкт-Петербурга')
+						+tabItem('6', 'Кладбища<br>Ленинградской области')
+				.tabs__content
+					+e.row.row.justify-content-center
+						mixin tabItem(i, title, text)
+							.col-sm-6.col-md-4.col-lg-3
+								+e.wrap
+									+img(`img/svg/sServices-icon-${i}.svg`)
+									+e.title!= title
+									if text
+										p Цена от #[span 000] руб.
+						+tabItem('1', 'Организация погребения', 'true')
+						+tabItem('2', 'Место на кладбище', 'true')
+						+tabItem('3', 'Рытье могилы', 'true')
+						+tabItem('4', 'Родовое захоронение', 'true')
+						+tabItem('5', 'Необходимые документы', 'true')
+						+tabItem('6', 'Кладбища<br>Санкт-Петербурга')
+						+tabItem('6', 'Кладбища<br>Ленинградской области')
+				.tabs__content
+					+e.row.row.justify-content-center
+						mixin tabItem(i, title, text)
+							.col-sm-6.col-md-4.col-lg-3
+								+e.wrap
+									+img(`img/svg/sServices-icon-${i}.svg`)
+									+e.title!= title
+									if text
+										p Цена от #[span 000] руб.
+						+tabItem('1', 'Организация погребения', 'true')
+						+tabItem('2', 'Место на кладбище', 'true')
+						+tabItem('3', 'Рытье могилы', 'true')
+						+tabItem('4', 'Родовое захоронение', 'true')
+						+tabItem('5', 'Необходимые документы', 'true')
+						+tabItem('6', 'Кладбища<br>Санкт-Петербурга')
+						+tabItem('6', 'Кладбища<br>Ленинградской области')
+				.tabs__content
+					+e.row.row.justify-content-center
+						mixin tabItem(i, title, text)
+							.col-sm-6.col-md-4.col-lg-3
+								+e.wrap
+									+img(`img/svg/sServices-icon-${i}.svg`)
+									+e.title!= title
+									if text
+										p Цена от #[span 000] руб.
+						+tabItem('1', 'Организация погребения', 'true')
+						+tabItem('2', 'Место на кладбище', 'true')
+						+tabItem('3', 'Рытье могилы', 'true')
+						+tabItem('4', 'Родовое захоронение', 'true')
+						+tabItem('5', 'Необходимые документы', 'true')
+						+tabItem('6', 'Кладбища<br>Санкт-Петербурга')
+						+tabItem('6', 'Кладбища<br>Ленинградской области')
+			if btn
+				a(href="#").btn.btn-secondary Все услуги
+	// end sServices
