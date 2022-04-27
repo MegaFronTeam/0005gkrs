@@ -1,22 +1,36 @@
  
 	  
 .soc{
-	@include roww(10px, m);
+	@include roww(6px, m);
 	display: flex;
 	&__item{
 		text-decoration: none !important; 
 		vertical-align: middle;
+		width: rem(24);
+		height: rem(24);
+		border-radius: 50%;
 		@include mt;
 		display: grid;
 		place-items: center;
+		&--telegram {
+			background-color: #2F89CE;
+		}
+		&--viber {
+			background-color: #7C509A;
+		}
+		&--whatsapp {
+			background-color: #48C95F;
+		}
 		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			// opacity: .6 ;
+		 	box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			opacity: .8 ;
 		}
 		
 	}
 	.icon{
-		font-size: rem(30);
+		font-size: 13px;
+		line-height: 24px;
+		color: $white;
 	}
 
 

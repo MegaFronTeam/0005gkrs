@@ -18,28 +18,15 @@ block variables
 
 block title
 	- let  title= index.head.title
-	title= title
+	title= 'ГКРС'
 block pagecontent
 	//- +mob-mnu()
 	
 	
 	+header()
-	+top-nav()
 	+topLine
+	+top-nav()
 	+headerBlock
-
-	+soc()
-	+sForm()
-	//- +sForm()
-	//- - let list = items[0].title
-	//- p= list
-	.container
-		each item in items
-			li 
-				h2= item.title
-				p= item.text
-	//- +sContact()
-	
 	+footer()
       
 

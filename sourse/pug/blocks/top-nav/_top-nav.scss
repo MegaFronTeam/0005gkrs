@@ -1,13 +1,23 @@
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	// 
+	&__container {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-top: 1px solid rgba($info, 0.2);
+		border-bottom: 1px solid rgba($info, 0.2);
+	}
+
+	.row {
+		align-items: center;
+	}
 	@include media-breakpoint-up(xl) {
-		background-color: #000;
-		border: 1px solid #000;
+		// background-color: #000;
+		// border: 1px solid #000;
 	}
 
 	@include media-breakpoint-up(lg) {
-		background-color: red;
+		// background-color: red;
 
 	}
 	p{

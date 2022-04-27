@@ -136,6 +136,7 @@ body {
 
 .small {
 	font-size: $small;
+	color: $info;
 }
 
 .tdn {
@@ -486,4 +487,13 @@ iframe {
 .swiper-wrapper{
 	
 	// @include row-sw(10px, sm, 100px);
+}
+
+.btn {
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 0.1em;
+}
+.btn-primary {
+	color: $white;
 }

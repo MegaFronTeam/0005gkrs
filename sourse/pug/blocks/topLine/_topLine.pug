@@ -2,8 +2,41 @@ mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
 			.row
+				.col-auto
+					+e.logo(href="#")
+						+img('img/logo.png')
+				.col
+					+e.header.row
+						.col
+							h1.small Ритуальные услуги в&nbsp;Санкт-Петербурге и&nbsp;области
+						.col
+							ul
+								li
+									a(href="#").small О компании
+								li
+									a(href="#").small Цены
+								li
+									a(href="#").small FAQ
+								li
+									a(href="#").small Пособия
+								li
+									a(href="#").small Контакты
+					+e.footer.row
+						+e.action.col-auto
+							a(href="#") Что делать, если умер близкий человек
+						.col-auto
+							+soc
+						+e.footer-tel.col-auto
+							a(href="tel:+79111377077") +7-911-137-70-77
+								.small Работаем круглосуточно
+						.col-auto
+							+btn('Перезвоните мне').btn.btn-sm.btn-outline-secondary
+						.col-auto
+							button
+								+img('img/topline-search.png')
+							a(href="#")
+								+img('img/topline-cart.png')
+ 
+
 	// end topLine

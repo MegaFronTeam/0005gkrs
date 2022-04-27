@@ -5,6 +5,22 @@
 	min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
 	// background-color: #000000;
+.container {
+	position: relative;
+}
+&__text {
+	max-width: 630px;
+}
+
+&__descr {
+	font-size: rem(19);
+}
+
+&__action {
+	font-size: rem(30);
+	color: $blue;
+	font-weight: 800;
+}
 
 	h1 {
 		margin-bottom: 1px;
@@ -12,6 +28,17 @@
 
 	h2 {
 		margin-bottom: 1px;
+	}
+
+	span {
+		color: $blue;
+	}
+
+	img {
+		position: absolute;
+		bottom: 0;
+		right: -10%;
+		z-index: -1;
 	}
 
 	@include media-breakpoint-up(xl) {}

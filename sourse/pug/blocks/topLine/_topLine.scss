@@ -1,6 +1,70 @@
 
 	// start .topLine
 	.topLine {
+		padding-top: rem(17);
+		padding-bottom: rem(32);
+		h1 {
+			margin: 0;
+		}
+		.row {
+			align-items: center;
+		}
+		&__header {
+			margin-bottom: rem(44);
+			align-items: center;
+			ul {
+				display: flex;
+				margin: 0;
+				list-style-type: none;
+			}
+			li:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+
+		.small {
+			display: inline-block;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			font-size: 12px;
+			font-weight: 600;
+		}
+
+		&__action {
+			a {
+				font-size: rem(18);
+				font-weight: 800;
+				color:$secondary;
+				border-bottom: 2px dotted $secondary;
+			}
+		}
+
+		&__footer {
+			.small {
+				position: absolute;
+				top:-50%;
+				right: 0;
+				font-size: 13px;
+				text-transform:none;
+				letter-spacing: normal;
+			}
+		}
+
+		&__footer-tel {
+			a {
+				position: relative;
+				font-weight: 800;
+				font-size: rem(21);
+				text-align: right;
+				letter-spacing: 0.02em;
+				color: $body-color;
+			}
+		}
+
+		&__btn {
+			border-width: 2px;
+			font-size: 12px;
+		} 
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

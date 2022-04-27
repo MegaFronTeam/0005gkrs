@@ -2,9 +2,16 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
+			+e.text
+				h2.h1 Ритуальные услуги в&nbsp;Санкт-Петербурге от&nbsp;
+					span 25&nbsp;000 
+					| рублей
+				+e.descr Возьмем на&nbsp;себя всю организацию похорон, окажем профессиональную помощь и&nbsp;поддержку.
+				.small Честные цены без переплат. Экономия до&nbsp;15&nbsp;000&nbsp;рублей.
+				+e.action(href="tel:+79111377077") Горячая линия +7-911-137-70-77
+				.small Круглосуточно
+				+btn('Вызвать агента').btn.btn-secondary
+				+btn('Рассчитать стоимость похорон').btn.btn-primary
+			+img('img/header-block.png')
 						
 	// end headerBlock
