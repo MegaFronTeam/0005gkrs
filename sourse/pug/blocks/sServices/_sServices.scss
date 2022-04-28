@@ -11,6 +11,7 @@
 	&__row {
 		--bs-gutter-y: #{rem(30)};
 	}
+	--card-scale: 0;
 	&__wrap {
 		background-color: $white;
 		border-radius: 8px;
@@ -19,6 +20,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		position: relative;
+		&:hover {
+			--card-scale: 1;
+		}
 		img {
 			margin-bottom: auto;
 		}
@@ -42,6 +47,33 @@
 			@include media-breakpoint-up(lg) {
 				margin-bottom: rem(50);
 			}
+		}
+	}
+	&__moreInfo {
+		@include mt;
+		position: absolute;
+		width: 100%;
+		background-color: $white;
+		padding: rem(15) rem(21);
+		transform: scaleY(var(--card-scale,0));
+    transform-origin: top;
+		left: 0;
+		top: calc(100% + 5px);
+		box-shadow: 0px 4px 15px rgba(116, 136, 166, 0.2);
+		border-radius: 8px;
+		z-index: 2;
+		&:before {
+			content: '';
+			position: absolute;
+			top: -10px;
+			left: 0;
+			width: 100%;
+			height: 20px;
+			background-color: transparent;
+		}
+		p {
+			font-size: rem(14);
+			color: $info;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

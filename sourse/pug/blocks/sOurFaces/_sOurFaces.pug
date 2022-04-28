@@ -1,0 +1,16 @@
+mixin sOurFaces(data)
+	// start sOurFaces
+	+b.SECTION.sOurFaces.section#sOurFaces&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Наши лица
+			+e.slider--js.swiper
+				.swiper-wrapper
+					-for(i=1; i<=4; i++)
+						+e.wrap.swiper-slide
+							+e.img-wrap
+								+img(`/img/sOurFaces-img-${i}.jpg`)
+							.h6 Иван Иваныч
+							p Ритуальный агент<br>№ *табельный номер*
+			+arrow()
+	// end sOurFaces

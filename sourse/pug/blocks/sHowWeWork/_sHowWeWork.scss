@@ -1,0 +1,92 @@
+// start .sHowWeWork
+.sHowWeWork {
+	--sPT: #{rem(50)};
+	--sPB: #{rem(50)};
+	// --sTPB: ;
+	&__wrap {
+		position: relative;
+		padding-top: rem(50);
+		padding-bottom: 0;
+		padding-right: rem(40);
+		padding-left: rem(40);
+		background-color: $white;
+		border-radius: 8px;
+		z-index: 2;
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(100);
+			padding-bottom: rem(100);
+			padding-right: rem(78);
+			padding-left: rem(80);
+		}
+		h2 {
+			margin-bottom: rem(30);
+			@include media-breakpoint-down(md) {
+				font-size: rem(23);
+			}
+		}
+		ul {
+			margin-bottom: 0;
+			li {
+				display: flex;
+				list-style-type: none;
+				&:not(:last-child) {
+					margin-bottom: rem(10);
+					@include media-breakpoint-up(lg) {
+						margin-bottom: rem(26);
+					}
+				}
+				p {
+					font-size: rem(14);
+					margin-bottom: 0;
+					@include media-breakpoint-up(lg) {
+						font-size: rem(16);
+					}
+				}
+			}
+		}
+		img {
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: -1;
+			}
+			@include media-breakpoint-down(lg) {
+				width: 100%;
+			}
+		}
+	}
+	&__subtitle {
+		color: $info;
+		margin-bottom: rem(20);
+		font-size: rem(15);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(19);
+			margin-bottom: 0;
+		}
+	}
+	&__num {
+		color: $info;
+		font-size: rem(16);
+		font-weight: 800;
+		line-height: 1.60em;
+		background-color: $body-bg;
+		height: rem(29);
+		min-width: rem(29);
+		border-radius: 50%;
+		margin-right: rem(10);
+		display: flex;
+    align-items: center;
+    justify-content: center;
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(27);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sHowWeWork
