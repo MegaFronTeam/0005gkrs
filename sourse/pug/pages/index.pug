@@ -7,6 +7,7 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sServices/_sServices.pug
+include ../blocks/sProductsPreview/_sProductsPreview.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -29,6 +30,7 @@ block pagecontent
 	+top-nav()
 	+headerBlock
 	+sServices('true', 'true')
+	+sProductsPreview()
 	+footer()
       
 

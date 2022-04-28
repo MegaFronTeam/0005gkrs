@@ -11,55 +11,6 @@
 	&__row {
 		--bs-gutter-y: #{rem(30)};
 	}
-	.section-title {
-		margin-bottom: rem(25);
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(50);
-		}
-		h2 {
-			margin-bottom: rem(20);
-			@include media-breakpoint-up(lg) {
-				margin-bottom: rem(30);
-			}
-		}
-		span {
-			color: $blue;
-		}
-		p {
-			color: $info;
-			margin-bottom: 0;
-		}
-	}
-	.tabs {
-		margin-bottom: rem(49);
-		&__caption {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-wrap: wrap;
-			gap: rem(30);
-			margin-bottom: rem(25);
-			@include media-breakpoint-up(lg) {
-				margin-bottom: rem(50);
-			}
-		}
-		&__btn {
-			@include mt;
-			color: $info;
-			padding-bottom: rem(11);
-			border-bottom: 3px solid $white;
-			&.active, &:hover {
-				color: $dark;
-				border-bottom-color: $blue;
-			}
-			h5 {
-				margin-bottom: 0;
-			}
-		}
-		&__content {
-			text-align: center;
-		}
-	}
 	&__wrap {
 		background-color: $white;
 		border-radius: 8px;
@@ -85,6 +36,14 @@
 	&__title {
 		font-weight: 800;
 	}
+	.tabs {
+		&__caption {
+			margin-bottom: rem(25);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(50);
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -93,3 +52,49 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sServices
+	
+.section-title {
+	margin-bottom: rem(25);
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(50);
+	}
+	h2 {
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(30);
+		}
+	}
+	span {
+		color: $blue;
+	}
+	p {
+		color: $info;
+		margin-bottom: 0;
+	}
+}
+.tabs {
+	margin-bottom: rem(49);
+	&__caption {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(30);
+	}
+	&__btn {
+		@include mt;
+		color: $info;
+		padding-bottom: rem(11);
+		border-bottom: 3px solid $white;
+		&.active, &:hover {
+			color: $dark;
+			border-bottom-color: $blue;
+		}
+		h5 {
+			margin-bottom: 0;
+		}
+	}
+	&__content {
+		text-align: center;
+	}
+}
