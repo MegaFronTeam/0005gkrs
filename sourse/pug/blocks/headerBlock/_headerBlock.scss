@@ -1,34 +1,63 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
+	padding-top: rem(110);
+	padding-bottom: 0;
+	// min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
 	// background-color: #000000;
 .container {
 	position: relative;
 }
+h2 {
+	margin-bottom: rem(33);
+	line-height: 135%;
+}
 &__text {
 	max-width: 630px;
+	@include media-breakpoint-up(xl) {
+		padding-bottom: rem(150);
+	}
 }
 
 &__descr {
+	margin-bottom: rem(27);
 	font-size: rem(19);
 }
 
-&__action {
-	font-size: rem(30);
-	color: $blue;
-	font-weight: 800;
+.small {
+	margin-bottom: 6px;
 }
 
-	h1 {
-		margin-bottom: 1px;
+&__action {
+	display: block;
+	margin-bottom: rem(10);
+	font-size: rem(18);
+	color: $blue;
+	font-weight: 800;
+	@include media-breakpoint-up(sm) {
+		font-size: rem(30);
 	}
+}
 
-	h2 {
-		margin-bottom: 1px;
+&__btn {
+	margin-top: rem(22);
+	@include media-breakpoint-down(sm) {
+		width: 100%;
 	}
+}
+
+.btn-secondary {
+	@include media-breakpoint-up(md) {
+		margin-right: rem(17);
+	}
+}
+
+.btn-primary {
+	@include media-breakpoint-up(md) {
+		width: 62%;
+	}
+}
 
 	span {
 		color: $blue;
@@ -37,8 +66,14 @@
 	img {
 		position: absolute;
 		bottom: 0;
-		right: -10%;
+		// right: -23%;
 		z-index: -1;
+		@include media-breakpoint-up(xl) {
+			right: -45%;
+		}
+		@include media-breakpoint-up(xxl) {
+			right: -20%;
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}
