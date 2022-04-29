@@ -17,14 +17,24 @@
 			border-left: 1px solid rgba($info, .2);
 		}
 		&__header {
+			--bs-gutter-y:#{rem(15)};
 			margin-bottom: rem(44);
 			align-items: center;
 			justify-content: space-between;
+			h1 {
+				@include media-breakpoint-down(xl) {
+					width: 100%;
+					text-align: center;
+				}
+			}
 			ul {
 				display: flex;
-				justify-content: end;
+				justify-content: center;
 				margin: 0;
 				list-style-type: none;
+				@include media-breakpoint-up(xl) {
+					justify-content: flex-end;
+				}
 			}
 			li:not(:last-child) {
 				margin-right: 20px;
@@ -49,6 +59,11 @@
 		}
 
 		&__footer {
+			justify-content: space-between;
+			--bs-gutter-y: #{rem(15)};
+			@include media-breakpoint-up(xxl) {
+				justify-content: flex-start;
+			}
 			.small {
 				position: absolute;
 				top:-50%;

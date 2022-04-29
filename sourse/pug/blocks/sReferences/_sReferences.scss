@@ -1,0 +1,37 @@
+// start .sReferences
+.sReferences {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	.tabs__caption {
+		margin-bottom: rem(40);
+	}
+	&__map-wrap {
+		overflow: hidden;
+		margin-bottom: 50px;
+		background-color: $white;
+		border-radius: 8px;
+		@include block(450, 300);
+		@include media-breakpoint-up(lg) {
+			@include block(1290, 450);
+		}
+		& > * {
+			position: absolute;
+			width: 100% !important;
+			height: 100% !important;
+			top:0;
+			left: 0;
+		}
+	}
+
+	.btn {
+		padding: rem(20) rem(60);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sReferences

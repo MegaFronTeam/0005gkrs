@@ -1,0 +1,60 @@
+mixin sPackages(data)
+	// start sPackages
+	+b.SECTION.sPackages.section#sPackages&attributes(attributes)
+		.container
+			+e.container
+				+b.section-title.text-center
+					h2 Пакеты услуг
+				.tabs
+					.tabs__caption
+						.tabs__btn
+							h5 Погребение
+						.tabs__btn.active
+							h5 Кремация
+						.tabs__btn
+							h5 Оформление документов
+						.tabs__btn
+							h5 Груз 200
+					.tabs__content
+						p Погребение
+					.tabs__content.active
+						.tabs-vert.row
+							.tabs-vert__caption.col-12.col-md-4.col-xl-3
+								.tabs-vert__btn
+									+btn('Базовый','button').btn.btn-outline-info
+								.tabs-vert__btn
+									+btn('Стандарт','button').btn.btn-outline-info
+								.tabs-vert__btn.active
+									+btn('Стандарт +','button').btn.btn-outline-info
+							.tabs-vert__content.col
+								p Базовый
+							.tabs-vert__content.col
+								p Стандарт
+							.tabs-vert__content.col
+								ul
+									li Гроб лакированный
+									li Подушка и&nbsp;покрывало в&nbsp;гроб
+									li Урна для праха
+									li Доставка похоронных принадлежностей в&nbsp;морг
+									li Транспорт: Морг в&nbsp;черте города-Крематорий
+									li Услуги крематория
+									li Сдача урны
+									li Оформление заказа
+									li Первичное обращение в&nbsp;морг
+									li Получение медицинского свидетельства о&nbsp;смерти
+									li Оплата услуг морга
+									li Сдача одежды в&nbsp;морг
+									li Получение гербового свидетельства в&nbsp;ЗАГС
+									li Агентское сопровождение покойного в&nbsp;день похорон от&nbsp;морга до&nbsp;места прощания
+									li Агентское сопровождение покойного в&nbsp;день похорон от&nbsp;места прощания до&nbsp;крематория
+									li Предоставление зала крематория для прощания
+									li Получение урны, доставка в&nbsp;агентство
+								p *Возможно дистанционное оформление
+								+e.price от 55 000 рублей
+								+btn('Оставить заявку').btn.btn-secondary
+					.tabs__content
+						p Оформление документов
+					.tabs__content
+						p Груз 200
+
+	// end sPackages

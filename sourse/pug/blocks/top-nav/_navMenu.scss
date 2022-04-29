@@ -5,8 +5,11 @@
 		text-align: center;
 		@include roww(34px);
 		flex-wrap: wrap;
-		justify-content: end;
+		justify-content: flex-end;
 	}
+	// @include media-breakpoint-up(xl) {
+	// 	@include roww(34px);
+	// }
 
 	list-style: none;
 	position: relative;

@@ -112,8 +112,10 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/headerBlock/_headerBlock.scss';
 @import '../pug/blocks/sWhy/_sWhy.scss';
 @import '../pug/blocks/sSteps/_sSteps.scss';
+@import '../pug/blocks/sPackages/_sPackages.scss';
 @import '../pug/blocks/sServices/_sServices.scss';
 @import '../pug/blocks/sProductsPreview/_sProductsPreview.scss';
+@import '../pug/blocks/sReferences/_sReferences.scss';
 @import '../pug/blocks/sHowWeWork/_sHowWeWork.scss';
 @import '../pug/blocks/sOurFaces/_sOurFaces.scss';
 

@@ -1,23 +1,25 @@
 // start .sSteps
 .sSteps {
-		--sPT: #{rem(14)} ;
-		// --sPB: ;
-		--sTPB: #{rem(34)};
-		counter-reset: steps;
-		
-		.small {
-			margin-bottom: rem(70);
-			text-align: center;
-			font-size: rem(19);
-		}
+	--sPT: #{rem(14)};
+	--sPB: #{rem(100)};
+	// --sTPB: #{rem(34)};
+	counter-reset: steps;
+	.section-title {
+		margin-bottom: 34px;
+	}	
+	.small {
+		margin-bottom: rem(70);
+		text-align: center;
+		font-size: rem(19);
+	}
 
-		.row {
-			margin-bottom: rem(140);
-			--bs-gutter-y: #{rem(60)};
-			@include media-breakpoint-up(md) {
-				--bs-gutter-y: #{rem(40)}
-			}
+	.row {
+		margin-bottom: rem(118);
+		--bs-gutter-y: #{rem(60)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: #{rem(40)}
 		}
+	}
 		@include media-breakpoint-up(xl) {}
 		@include media-breakpoint-up(lg) {}
 		@include media-breakpoint-up(md) {}

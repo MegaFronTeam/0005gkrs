@@ -497,3 +497,8 @@ iframe {
 .btn-primary {
 	color: $white;
 }
+
+.btn-outline-info {
+	color: $info;
+	border: 1px solid $info;
+}
