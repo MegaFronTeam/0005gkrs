@@ -1,9 +1,67 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.wrap
+				+e.row.row
+					+e.col-logo.col-12.col-sm-6.col-lg-3
+						+e.logo(href="#")
+							+img('img/logo.png')
+					+e.col-nav.col.col-lg-2
+						+e.title О нас
+						ul
+							li
+								a(href="#")  О компании
+							li
+								a(href="#")  Команда
+							li
+								a(href="#")  Тарифы
+							li
+								a(href="#")  Статьи
+							li
+								a(href="#")  Партнёрам
+							li
+								a(href="#")  Контакты
+					+e.col-nav.col.col-lg-2
+						+e.title Услуги
+						ul
+							li
+								a(href="#")  Погребение
+							li
+								a(href="#")  Кремация
+							li
+								a(href="#")  Оформление документов
+							li
+								a(href="#")  Транспорт
+							li
+								a(href="#")  VIP похороны
+					+e.col-nav.col.col-lg-2
+						+e.title Каталог
+						ul
+							li
+								a(href="#")  Гробы
+							li
+								a(href="#")  Урны
+							li
+								a(href="#")  Венки
+							li
+								a(href="#")  Кресты
+							li
+								a(href="#")  Памятники
+							li
+								a(href="#")  Одежда
+					+e.col-info.col-sm-6.col-lg-3
+						+e.title Круглосуточно
+						+e.tel(href="tel:+79111377077") +7-911-137-70-77
+						+e.email(href="mailto:gkrs@info.ru") gkrs@info.ru
+						p Санкт-Петербург, Блохина, 25
+						+soc
+			+e.wrap
+				+e.row.row
+					.col 
+						+e.text ГКРС зарекомендовала себя на&nbsp;рынке как &laquo;честное агентство&raquo;. В&nbsp;своей работе мы&nbsp;опираемся на&nbsp;Федеральный закон &#8470;&nbsp;8&nbsp;ФЗ от&nbsp;12&nbsp;января 1996 года &laquo;О&nbsp;погребении и&nbsp;похоронном деле&raquo; и&nbsp;предоставляем услуги согласно ГОСТ Р&nbsp;54611&ndash;2011 (Услуги по&nbsp;организации и&nbsp;проведению похорон).
+					.col-auto
+						+e.link-wrap
+							a(href="#") Пользовательское соглашение
+							a(href="#") Политика конфиденциальности
+							a(href="#") Карта сайта
+							a(href="#") Копирайты
