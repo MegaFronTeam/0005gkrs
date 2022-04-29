@@ -18,3 +18,12 @@ mixin sWhy(data)
 					+whyItem('3','Низкие цены', 'с&nbsp;нами&nbsp;Вы экономите до&nbsp;15&nbsp;000 рублей')
 					+whyItem('4','Быстрые сроки', 'организация похорон в&nbsp;течение 2-х дней')
 	// end sWhy
+
+mixin sWhy2(data)
+	+b.sWhy--2.section#sWhy&attributes(attributes)
+		.container.text-center
+			+e.row.row
+				+whyItem('1','Более 10 лет', 'опыта организации похорон')
+				+whyItem('2','24/7', 'мы&nbsp;на&nbsp;связи с&nbsp;Вами')
+				+whyItem('3','Низкие цены', 'с&nbsp;нами&nbsp;Вы экономите до&nbsp;15&nbsp;000 рублей')
+				+whyItem('4','Быстрые сроки', 'организация похорон в&nbsp;течение 2-х дней')

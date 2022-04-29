@@ -38,13 +38,18 @@
 				width: 100%;
 			}
 		}
-		p {
-			color: $info;
-			font-size: rem(16);
-			line-height: 1.60em;
-			@include media-breakpoint-down(md) {
-				font-size: rem(14);
-			}
+	}
+	&__text {
+		color: $info;
+		font-size: rem(16);
+		line-height: 1.60em;
+		margin-bottom: 0;
+		text-align: center;
+		@include media-breakpoint-down(md) {
+			font-size: rem(14);
+		}
+		a {
+			text-decoration: underline;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

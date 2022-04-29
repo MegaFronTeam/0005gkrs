@@ -1,4 +1,2 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
-
-
-rm -rf node_modules
+1. <https://megafronteam.github.io/0005gkrs/public>
+2. <https://megafronteam.github.io/0005gkrs/public/02-Services.html>

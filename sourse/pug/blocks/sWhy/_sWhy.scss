@@ -20,7 +20,9 @@
 	.row {
 		justify-content: center;
 	}
-
+	&__row {
+		background-color: $white;
+	}
 	// &__items-list {		
 	// 	max-width: 1130px;
 	// 	margin: 0 auto;
@@ -28,7 +30,14 @@
 	// 	align-items: center;
 	// 	justify-content: space-between;
 	// }
-
+	&--2 {
+		--sPT: #{rem(50)};
+		--sPB: #{rem(50)};
+		.sWhy__row {
+			border-radius: 8px;
+			padding-top: rem(77);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
