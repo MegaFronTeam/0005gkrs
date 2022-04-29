@@ -7,18 +7,8 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sWhy/_sWhy.pug
-include ../blocks/sSteps/_sSteps.pug
 include ../blocks/sServices/_sServices.pug
-include ../blocks/sProductsPreview/_sProductsPreview.pug
-include ../blocks/sReferences/_sReferences.pug
-include ../blocks/sHowWeWork/_sHowWeWork.pug
-include ../blocks/sOurFaces/_sOurFaces.pug
-<<<<<<< HEAD
-include ../blocks/sPackages/_sPackages.pug
-=======
-include ../blocks/sFaq/_sFaq.pug
 include ../blocks/sHaveQuestions/_sHaveQuestions.pug
->>>>>>> 0c108229ba4e633144f73f31f0333fea6b7b4be3
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -30,8 +20,8 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= index.head.title
-	title= 'ГКРС'
+	- let  title= "Услуги"
+	title= title
 block pagecontent
 	//- +mob-mnu()
 	
@@ -39,17 +29,17 @@ block pagecontent
 	+header()
 	+topLine
 	+top-nav()
-	+headerBlock
-	+sWhy()
-	+sSteps()
-	+sPackages()
-	+sServices('true', 'true')
-	+sProductsPreview()
-	+sReferences()
-	+sHowWeWork()
-	+sOurFaces
-	+sFaq
-	+sHaveQuestions('true')
+	//- +headerBlock
+	//- +sWhy()
+	//- +sSteps()
+	+sServices()
+	//- +sProductsPreview()
+	//- block with map
+	//- +sHowWeWork()
+	//- +sOurFaces
+	//- +sFaq
+	+sWhy2
+	+sHaveQuestions()
 	+footer()
       
 
