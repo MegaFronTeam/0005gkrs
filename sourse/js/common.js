@@ -287,7 +287,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -362,6 +362,27 @@ function eventHandler() {
 
 	});
 	// modal window
+
+	const sOurFacesSwiper = new Swiper('.sOurFaces__slider--js', {
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 31,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			344: {
+				slidesPerView: 2,
+			},
+			576: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+		},
+	});
 
 };
 if (document.readyState !== 'loading') {

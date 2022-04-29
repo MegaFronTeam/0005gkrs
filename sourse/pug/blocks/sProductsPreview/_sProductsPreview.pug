@@ -1,0 +1,72 @@
+mixin sProductsPreview(data)
+	// start sProductsPreview
+	+b.SECTION.sProductsPreview.section#sProductsPreview&attributes(attributes)
+		.container
+			+e.wrap.text-center
+				+b.section-title.text-center
+					h2 У&nbsp;нас можно приобрести необходимые предметы
+					p Поможем организовать достойные похороны
+				.tabs
+					.tabs__caption
+						.tabs__btn.active
+							h5 Гробы
+						.tabs__btn
+							h5 Кресты
+						.tabs__btn
+							h5 Урны
+						.tabs__btn
+							h5 Венки
+						.tabs__btn
+							h5 Памятники
+					.tabs__content.active 
+						+e.row.row
+							-for(i=0; i<6; i++)
+								.col-md-6.col-lg-4
+									+e.wrap-item
+										+e.img-wrap 
+											+img('/img/sProducts-img-1.png')
+										+e.title Гроб лакированный белый
+										p от #[span 28 000] руб.
+										+e.btn(href="#").btn Подробнее
+					.tabs__content
+						+e.row.row
+							-for(i=0; i<6; i++)
+								.col-md-6.col-lg-4
+									+e.wrap-item
+										+e.img-wrap 
+											+img('/img/sProducts-img-1.png')
+										+e.title Гроб лакированный белый
+										p от #[span 28 000] руб.
+										+e.btn(href="#").btn Подробнее
+					.tabs__content
+						+e.row.row
+							-for(i=0; i<6; i++)
+								.col-md-6.col-lg-4
+									+e.wrap-item
+										+e.img-wrap 
+											+img('/img/sProducts-img-1.png')
+										+e.title Гроб лакированный белый
+										p от #[span 28 000] руб.
+										+e.btn(href="#").btn Подробнее
+					.tabs__content
+						+e.row.row
+							-for(i=0; i<6; i++)
+								.col-md-6.col-lg-4
+									+e.wrap-item
+										+e.img-wrap 
+											+img('/img/sProducts-img-1.png')
+										+e.title Гроб лакированный белый
+										p от #[span 28 000] руб.
+										+e.btn(href="#").btn Подробнее
+					.tabs__content
+						+e.row.row
+							-for(i=0; i<6; i++)
+								.col-md-6.col-lg-4
+									+e.wrap-item
+										+e.img-wrap 
+											+img('/img/sProducts-img-1.png')
+										+e.title Гроб лакированный белый
+										p от #[span 28 000] руб.
+										+e.btn(href="#").btn Подробнее
+				a(href="#").btn.btn-secondary Смотреть все
+	// end sProductsPreview
