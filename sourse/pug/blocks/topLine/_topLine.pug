@@ -3,10 +3,10 @@ mixin topLine()
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			.row
-				.col-auto
+				+e.left.col-auto
 					+e.logo(href="#")
 						+img('img/logo.png')
-				.col
+				+e.right.col
 					+e.header.row
 						.col
 							h1.small Ритуальные услуги в&nbsp;Санкт-Петербурге и&nbsp;области
@@ -32,8 +32,8 @@ mixin topLine()
 								.small Работаем круглосуточно
 						.col-auto
 							+btn('Перезвоните мне').btn.btn-sm.btn-outline-secondary
-						.col-auto
-							button
+						+e.buttons.col-auto
+							button.btn
 								+img('img/topline-search.png')
 							a(href="#")
 								+img('img/topline-cart.png')

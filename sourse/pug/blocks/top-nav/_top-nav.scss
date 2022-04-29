@@ -2,14 +2,25 @@
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	// 
 	&__container {
-		padding-top: 10px;
-		padding-bottom: 10px;
+		// padding-top: 6px;
+		padding-bottom: 3px;
 		border-top: 1px solid rgba($info, 0.2);
 		border-bottom: 1px solid rgba($info, 0.2);
 	}
 
 	.row {
 		align-items: center;
+	}
+
+	button {
+		display: flex;
+		justify-content: start;
+		padding: rem(13) rem(43) rem(13) rem(8);
+		background-image: url('../img/btn-arrow.svg');
+		background-repeat: no-repeat;
+		background-position: 95% center;
+		text-transform: none;
+		width: 125%;
 	}
 	@include media-breakpoint-up(xl) {
 		// background-color: #000;
