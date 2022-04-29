@@ -10,6 +10,8 @@ include ../blocks/sServices/_sServices.pug
 include ../blocks/sProductsPreview/_sProductsPreview.pug
 include ../blocks/sHowWeWork/_sHowWeWork.pug
 include ../blocks/sOurFaces/_sOurFaces.pug
+include ../blocks/sFaq/_sFaq.pug
+include ../blocks/sHaveQuestions/_sHaveQuestions.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -36,6 +38,8 @@ block pagecontent
 	//- block with map
 	+sHowWeWork()
 	+sOurFaces
+	+sFaq
+	+sHaveQuestions('true')
 	+footer()
       
 
