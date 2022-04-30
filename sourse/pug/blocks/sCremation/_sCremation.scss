@@ -1,0 +1,235 @@
+// start .sCremation
+.sCremation {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	&__header {
+		position: relative;
+		padding: rem(50) 10px rem(50);
+		margin-bottom: rem(50);
+		background-color:$white;
+		z-index: -2;
+		@include media-breakpoint-up(sm) {
+			padding: rem(90) 10px rem(100);
+		}
+		ul {
+			padding: 0;
+			margin-left: 20px;
+			margin-bottom: rem(25);
+			line-height: 190%;
+			list-style-image: url(../img/list-marker.svg);
+			li.active {
+				color: $primary;
+				font-weight: 800;
+			}
+		}
+		img {
+			position: absolute;
+			bottom: 0;
+			right: 50%;
+			transform: translateX(50%);
+			z-index: -1;
+			opacity: .3;
+			max-height: 100%;
+			@include media-breakpoint-up(lg) {
+				opacity: 1;
+			}
+			@include media-breakpoint-up(lg) {
+				right: 3%;
+				transform: none;
+			}
+		}
+		&-text {
+			position: relative;
+			z-index: 1;
+			padding-left: rem(10);
+			@include media-breakpoint-up(sm) {
+				padding-left: 8%;
+			}
+		}
+	}
+	h1 {
+		margin-bottom: rem(20);
+		max-width: 521px;
+		line-height: 137%;
+		font-size: rem(24);
+		@include media-breakpoint-up(sm) {
+			font-size: rem(40);
+		}
+		@include media-breakpoint-up(md) {
+			font-size: rem(50);
+		}
+	}
+
+	&__content {
+		max-width: 880px;
+		ul {
+			margin-bottom: rem(32);
+			padding-top: rem(23);
+			list-style-type: none;
+			font-weight: 800;
+			li {
+				position: relative;
+				padding-left: rem(35);
+				&:not(:last-child) {
+					margin-bottom: rem(10);
+				}
+				&:before {
+					content: url('../img/svg/list-arrow.svg');
+					position: absolute;
+					line-height: 1;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+		}
+		p {
+			margin-bottom: rem(12);
+			line-height: 160%;
+		}
+		table {
+			margin: rem(44) 0;
+			width: 100%;
+		}
+		thead {
+			border-bottom: 2px solid $primary;
+		}
+		th {
+			padding-bottom: rem(13);
+			color: $info;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 15px;
+			letter-spacing: 0.1em;
+		}
+		tbody {
+			font-weight: 800;
+		}
+		td {
+			padding: 16px 0;
+		}
+	}
+	.cremation-service {
+		border-bottom: 1px solid rgba($info, .3);
+		&__price {
+			text-align: right;
+			color: $primary;
+		}
+	}
+	&__img-wrap {
+		margin: 46px 0;
+		max-width: 100%;
+		border-radius: $border-radius;
+		overflow: hidden;
+		@include block(880, 380);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCremation
+.nav-ddgroup {
+	.dd-group {
+		padding: rem(37);
+		background-color: $white;
+		border-radius:$border-radius;
+		&__head {
+			position: relative;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			font-size: 14px;
+			letter-spacing: 0.1em;
+			font-weight: 800;
+			.icon {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				transform-origin: 50% 25%;
+				fill: none;
+				stroke: $body-color;
+				@include mt;
+			}
+		}
+		&__item {
+			&:not(:last-child) {
+				border-bottom: 1px solid rgba($info, .3);
+			}
+			&.active {
+				.icon {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		ul {
+			list-style-type: none;
+		}
+		a {
+			color: $info;
+			&.active {
+				color: $primary;
+			}
+		}
+	}
+}
+.calculator-link {
+	padding: rem(34);
+	border: 2px solid $primary;
+	border-radius: 8px;
+	text-align: center;
+	.icon {
+		fill: none;
+		stroke: $primary;
+	}
+	&__title {
+		font-weight: 800;
+	}
+	.btn {
+		width: 100%;
+	}
+}
+.advice-form {
+	padding: rem(34);
+	text-align: center;
+	background-color: $white;
+	border-radius:$border-radius;
+	.form-wrap {
+		&__title {
+			font-weight: 800;
+		}
+		&__descr {
+			font-size: 15px;
+			line-height: 160%;
+			color: $info;
+		}
+		&__input {
+			margin-bottom: rem(10);
+			background-color: $body-bg;
+			border-radius:$border-radius;
+			&::placeholder {
+				text-align: center;
+				font-size: 16px;
+				font-weight: 500;
+				color: $info;
+			}
+		}
+		button {
+			width: 100%;
+		}
+		.small {
+			font-size: 13px;
+			line-height: 150%;
+		}
+	}
+}
