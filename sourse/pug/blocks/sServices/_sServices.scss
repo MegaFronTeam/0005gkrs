@@ -49,6 +49,9 @@
 				margin-bottom: rem(50);
 			}
 		}
+		& + a {
+			margin-top: rem(50);
+		}
 	}
 	&__moreInfo {
 		@include mt;
