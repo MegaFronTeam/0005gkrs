@@ -1,0 +1,83 @@
+mixin sCremation(data)
+	// start sCremation
+	+b.SECTION.sCremation.section#sCremation&attributes(attributes)
+		.container
+			+e.header
+				+e.header-text
+					h1 Кремация в&nbsp;Санкт&#8209;Петербурге и&nbsp;области
+					ul
+						li.active Стоимость от&nbsp;16&nbsp;тысяч
+						li Аренда зала прощания
+						li Срок 2&nbsp;дня
+						li Опыт организации более 10&nbsp;лет
+					+btn('Вызвать ритуального агента').btn.btn-secondary
+				+img('img/cremation-header.png')
+			.row.justify-content-between
+				.col-9
+					+e.content
+						ul
+							li
+								a(href="#") Организация кремации
+							li
+								a(href="#") Как мы работаем
+							li
+								a(href="#") Стоимость услуги
+						p Простая в&nbsp;организации и&nbsp;исполнении процедура кремации позволяет избежать изнуряющих хлопот, связанных с&nbsp;поиском места на&nbsp;кладбище, покупкой мемориальной атрибутики, и&nbsp;сократить расходы на&nbsp;организацию похорон.
+						p Прощание с&nbsp;покойным в&nbsp;крематории морально и&nbsp;физически легче для близких, поскольку проходит более организованно и&nbsp;быстро.
+						table
+							thead
+								tr
+									th Услуга
+									th.text-end Стоимость
+							tbody
+								mixin cremationService(name, price)
+									+b.cremation-service.TR
+										+e.name.TD!= name
+										+e.price.TD #{price} &#8381;
+								+cremationService('Организация кремации', '3000')
+								+cremationService('Требования к&nbsp;гробам, урнам, транспорту', '3000')
+								+cremationService('Необходимые документы для кремации', '3000')
+						p Простая в&nbsp;организации и&nbsp;исполнении процедура кремации позволяет избежать изнуряющих хлопот, связанных с&nbsp;поиском места на&nbsp;кладбище, покупкой мемориальной атрибутики, и&nbsp;сократить расходы на&nbsp;организацию похорон.
+						p Прощание с&nbsp;покойным в&nbsp;крематории морально и&nbsp;физически легче для близких, поскольку проходит более организованно и&nbsp;быстро.
+						+e.img-wrap
+							+img('img/cremation-main.jpg')
+						p Простая в&nbsp;организации и&nbsp;исполнении процедура кремации позволяет избежать изнуряющих хлопот, связанных с&nbsp;поиском места на&nbsp;кладбище, покупкой мемориальной атрибутики, и&nbsp;сократить расходы на&nbsp;организацию похорон.
+						p Прощание с&nbsp;покойным в&nbsp;крематории морально и&nbsp;физически легче для близких, поскольку проходит более организованно и&nbsp;быстро.
+				.col-3
+					.nav-ddgroup
+						+ddGroup()
+							+ddGroupItem('dd-arrow-up', 'Кремация', activeClasses='')
+								ul
+									li
+										a(href="#").active Организация кремации
+									li
+										a(href="#") Основные требования
+									li
+										a(href="#") Залы прощания
+							+ddGroupItem('dd-arrow-up', 'Погребение', activeClasses='')
+								ul
+									li
+										a(href="#") Основные требования
+									li
+										a(href="#") Залы прощания
+							+ddGroupItem('dd-arrow-up', 'Организация похорон', activeClasses='')
+								ul
+									li
+										a(href="#") Залы прощания
+							+ddGroupItem('dd-arrow-up', 'Другие услуги', activeClasses='')
+								ul
+									li
+										a(href="#") Залы прощания
+					+b.calculator-link
+						+icon('calculator')
+						+e.title Калькулятор кремации
+						+btn('Рассчитать стоимость').btn.btn-primary
+					+b.advice-form
+						+form-wrap()
+							+e.title Нужна консультация?
+							+e.descr Оставьте заявку, и&nbsp;мы&nbsp;перезвоним в&nbsp;течение 10&nbsp;минут
+							+input('Имя', 'text','')(required)
+							+input('+7 (_ _ _) _ _ _-_ _-_ _', 'tel','')(required)
+							button.btn.btn-secondary(type="submit") Отправить
+							.small Нажимая &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;политикой конфиденциальности данных.
+	// end sCremation
