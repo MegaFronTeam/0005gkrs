@@ -1,8 +1,9 @@
 // start .sCremation
 .sCremation {
 		// --sPT: ;
-		// --sPB: ;
+		--sPB:40px;
 		// --sTPB: ;
+
 	&__header {
 		position: relative;
 		padding: rem(50) 10px rem(50);
@@ -140,8 +141,9 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sCremation
 .nav-ddgroup {
+	margin-bottom: rem(30);
 	.dd-group {
-		padding: rem(37);
+		padding: rem(20) rem(34);
 		background-color: $white;
 		border-radius:$border-radius;
 		&__head {
@@ -153,16 +155,18 @@
 			font-weight: 800;
 			.icon {
 				position: absolute;
-				right: 0;
-				top: 50%;
-				transform: translateY(-50%);
-				transform-origin: 50% 25%;
+				padding-left: 5px;
+				right: -5%;
+				top: -10%;
 				fill: none;
 				stroke: $body-color;
 				@include mt;
+				font-size: 32px;
 			}
 		}
 		&__item {
+			padding-top: 20px;
+			padding-bottom: 6px;
 			&:not(:last-child) {
 				border-bottom: 1px solid rgba($info, .3);
 			}
@@ -170,6 +174,11 @@
 				.icon {
 					transform: rotate(180deg);
 				}
+			}
+		}
+		&__content {
+			&:not(.active) {
+			display: none;
 			}
 		}
 		ul {
@@ -184,18 +193,24 @@
 	}
 }
 .calculator-link {
-	padding: rem(34);
+	margin-bottom: rem(27);
+	padding: rem(27) rem(34) rem(32);
 	border: 2px solid $primary;
 	border-radius: 8px;
 	text-align: center;
 	.icon {
+		margin-bottom: 6px;
+		font-size: rem(34);
 		fill: none;
 		stroke: $primary;
 	}
 	&__title {
+		margin-bottom: rem(12);
 		font-weight: 800;
 	}
 	.btn {
+		font-size: 12px;
+		padding: rem(15) rem(10);
 		width: 100%;
 	}
 }
@@ -206,15 +221,20 @@
 	border-radius:$border-radius;
 	.form-wrap {
 		&__title {
+			margin-bottom: 10px;
 			font-weight: 800;
 		}
 		&__descr {
+			margin-bottom: 13px;
 			font-size: 15px;
 			line-height: 160%;
 			color: $info;
 		}
 		&__input {
 			margin-bottom: rem(10);
+			padding-top: rem(13);
+			padding-bottom: rem(16);
+			border: none;
 			background-color: $body-bg;
 			border-radius:$border-radius;
 			&::placeholder {
@@ -225,7 +245,10 @@
 			}
 		}
 		button {
+			margin-bottom: 20px;
+			padding: rem(14);
 			width: 100%;
+			font-size: 12px;
 		}
 		.small {
 			font-size: 13px;

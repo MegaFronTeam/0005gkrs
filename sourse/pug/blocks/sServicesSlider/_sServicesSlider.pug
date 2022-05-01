@@ -1,0 +1,25 @@
+mixin servicesSlide(icon, title, price, btn)
+	+e.wrap
+		+icon(`sServicesSlider-icon-${icon}`)
+		+e.title= title
+		if price
+			+e.price Цена от #[span 000] руб.
+		a(href="#").btn.btn-outline-info= btn
+mixin sServicesSlider(data)
+	// start sServicesSlider
+	+b.SECTION.sServicesSlider.section#sServicesSlider&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Услуги
+			+e.slider--js.swiper
+				.swiper-wrapper
+					.swiper-slide
+						+servicesSlide('1','Погребение','price','Подробнее')
+					.swiper-slide
+						+servicesSlide('2','Транспортировка','price','Подробнее')
+					.swiper-slide
+						+servicesSlide('3','Рытье могилы','price','Подробнее')
+					.swiper-slide
+						+servicesSlide('4','Необходимые документы','price','Подробнее')
+			+arrow()
+	// end sServicesSlider

@@ -384,6 +384,32 @@ function eventHandler() {
 			},
 		},
 	});
+	const sServicesSliderSwiper = new Swiper('.sServicesSlider__slider--js', {
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 31,
+		navigation: {
+			nextEl: '.sServicesSlider .swiper-button-next',
+			prevEl: '.sServicesSlider .swiper-button-prev',
+		},
+		breakpoints: {
+			// 344: {
+			// 	slidesPerView: 2,
+			// },
+			// 576: {
+			// 	slidesPerView: 3,
+			// },
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		},
+	});
 
 	const sponsorsSwiper = new Swiper('.sponsors__slider--js', {
 		slidesPerView: 'auto',

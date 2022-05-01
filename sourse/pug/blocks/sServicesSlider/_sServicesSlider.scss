@@ -1,0 +1,72 @@
+// start .sServicesSlider
+.sServicesSlider {
+	--sPT:#{rem(50)} ;
+	// --sPB: ;
+	// --sTPB: 0;
+	.container {
+		position: relative;
+	}
+	.section-title {
+		margin-bottom: rem(34);
+	}
+	&__wrap {
+		height: auto;
+		text-align: center;
+		padding-top: rem(30);
+		padding-bottom: rem(37);
+		background-color: $white;
+		border-radius: $border-radius;
+		.icon {
+			margin-bottom: rem(14);
+			font-size: rem(56);
+			color: $primary
+		}
+	}
+	&__title {
+		margin-bottom: rem(4);
+		font-weight: bold;
+	}
+	&__price {
+		margin-bottom: rem(14);
+		font-size: 16px;
+		span {
+			color: $primary;
+			font-weight: bold;
+		}
+	}
+	.btn {
+		padding: rem(10) rem(20);
+		font-size: 12px;
+		border: 2px solid $body-bg;
+	}
+	.swiper-button-hand {
+		color: #AAAEBE;
+		border: none;
+		width: rem(50);
+		height: rem(50);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 75px;
+		.icon {
+			font-size: rem(24);
+		}
+		&:hover {
+			background-color: #AAAEBE;
+			color: $white;
+		}
+		&-next {
+			right: -52px;
+		}
+		&-prev {
+			left: -52px;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sServicesSlider
