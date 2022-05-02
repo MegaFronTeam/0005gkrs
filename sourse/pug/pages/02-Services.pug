@@ -3,12 +3,13 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
-include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sWhy/_sWhy.pug
 include ../blocks/sServices/_sServices.pug
 include ../blocks/sHaveQuestions/_sHaveQuestions.pug
+include ../blocks/sFuneralServices/_sFuneralServices.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -29,12 +30,12 @@ block pagecontent
 	+header()
 	+topLine
 	+top-nav()
+	+page-head('Главная', 'Услуги')
+	+sFuneralServices
 	//- +headerBlock
 	//- +sWhy()
 	//- +sSteps()
 	+sServices()
-	//- +sProductsPreview()
-	//- block with map
 	//- +sHowWeWork()
 	//- +sOurFaces
 	//- +sFaq

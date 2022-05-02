@@ -419,6 +419,10 @@ function eventHandler() {
 		},
 	});
 
+	var breadcrumbSlider = new Swiper(".breadcrumb-slider--js", {
+		slidesPerView: 'auto',
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

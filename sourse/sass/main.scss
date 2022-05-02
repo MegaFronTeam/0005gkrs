@@ -45,7 +45,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
 // @import "./node_modules/bootstrap/scss/accordion";
-// @import "./node_modules/bootstrap/scss/breadcrumb";
+@import "./node_modules/bootstrap/scss/breadcrumb";
 // @import "./node_modules/bootstrap/scss/pagination";
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/alert";
@@ -69,14 +69,14 @@ $output-bourbon-deprecation-warnings: false;
 // scss-docs-end import-stack
 
 
-// .breadcrumb {
-// 	.active {
-// 		a {
-// 			// color: $breadcrumb-active-color;
-// 			pointer-events: none;
-// 		}
-// 	}
-// }
+.breadcrumb {
+	.active {
+		a {
+			// color: $breadcrumb-active-color;
+			pointer-events: none;
+		}
+	}
+}
 // @import "./node_modules/bootstrap/scss/pagination";
 
 // .pagination-wrapper ul {
@@ -123,6 +123,7 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sCremation/_sCremation.scss';
 @import '../pug/blocks/sServicesSlider/_sServicesSlider.scss';
 @import '../pug/blocks/sArticle/_sArticle.scss';
+@import '../pug/blocks/sFuneralServices/_sFuneralServices.scss';
 
 @import '../pug/blocks/header/_header.scss';
 @import '../pug/blocks/footer/_footer.scss';

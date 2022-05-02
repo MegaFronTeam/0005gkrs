@@ -91,3 +91,22 @@
 		}
 	}
 }
+
+.page-head {
+	padding-top: rem(20);
+	padding-bottom: rem(31);
+}
+
+.breadcrumb {
+	flex-wrap: nowrap;
+	margin-bottom: 0;
+	&-item {
+		width: max-content;
+		// font-size: rem(16);
+		&.active {
+			a {
+				color: $info;
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+mixin sFuneralServices(data)
+	// start sFuneralServices
+	+b.SECTION.sFuneralServices.section#sFuneralServices&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-6
+					h1 Ритуальные услуги
+					p Разнообразный и&nbsp;богатый опыт начало повседневной работы по&nbsp;формированию позиции играет важную роль в&nbsp;формировании системы обучения кадров, соответствует насущным потребностям. Товарищи! начало повседневной работы по&nbsp;формированию позиции влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации систем массового участия.
+				+e.col-img.col-lg-6
+					+img('img/sFuneralServices-img-1.png', 'bg')
+			+e.row-list.row
+				mixin sFuneralServices-item(img, title, ...items)
+					.col-sm-6.col-lg-4.col-xl-3
+						+e.wrap
+							+img(`img/sFuneralServices-img-${img}.png`)
+							h5!= title
+							ul
+								each item in items
+									li
+										+icon('check-icon')
+										!= item
+							a(href="#").btn показать все
+				+sFuneralServices-item(2, 'Организация похорон', 'Вызов ритуального агента', 'Бальзамирование', 'Гражданская панихида', 'Организация поминок', 'Организация почетного захоронения')
+				+sFuneralServices-item(3, 'Погребение', 'Организация погребения', 'Необходимые документы', 'ГВыделение места на кладбище', 'Рытье могилы и дополнительные услуги', 'Родовое захоронение')
+				+sFuneralServices-item(4, 'Кремация', 'Организация кремации', 'Требования к гробам, урнам, транспорту', 'Необходимые документы для кремации', 'Залы прощания')
+				+sFuneralServices-item(5, 'Другие услуги', 'Груз 200', 'Прижизненный договор', 'Аренда катафалка', 'Дезинфекция', 'Интерактивный мемориал', 'VIP-похороны')
+	// end sFuneralServices
