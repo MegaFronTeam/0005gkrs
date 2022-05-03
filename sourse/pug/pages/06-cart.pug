@@ -16,9 +16,7 @@ include ../blocks/sOurFaces/_sOurFaces.pug
 include ../blocks/sPackages/_sPackages.pug
 include ../blocks/sFaq/_sFaq.pug
 include ../blocks/sHaveQuestions/_sHaveQuestions.pug
-include ../blocks/sCremation/_sCremation.pug
-include ../blocks/sServicesSlider/_sServicesSlider.pug
-include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sCart/_sCart.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -31,7 +29,7 @@ block variables
 
 block title
 	- let  title= index.head.title
-	title= 'Похороны за счет государства'
+	title= 'Корзина'
 block pagecontent
 	//- +mob-mnu()
 	
@@ -39,8 +37,9 @@ block pagecontent
 	+header()
 	+topLine
 	+top-nav()
-	+page-head('Главная', 'Статьи', title)
-	+sArticle()
-	+sServicesSlider()
-	+sHaveQuestions('', 'Вызов ритуального агента')
+	+page-head('Главная', 'Корзина')
+	+sCart()
+	+sHaveQuestions('Остались вопросы?','')
 	+footer()
+
+

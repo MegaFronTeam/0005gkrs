@@ -61,40 +61,45 @@
 }
 
 .addBlock{
-	color: var(--color, #{$info});
-	// border: 1px solid;
-	border-radius: 8px;
-	background-color: $body-bg;
+	max-width: rem(116);
+	margin: 0 auto;
+	padding: rem(12) rem(8);
+	color: $info;
+	// border: 1px solid;	
+	border-radius: $border-radius;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	position: relative;
 	overflow: hidden;
-	width: 100%;
-	padding: 0 5px;
+	background-color: $body-bg;
 	input{
-		color: inherit;
+		color: $body-color;
 		text-align: center;
 		border: none;
-		height: rem(42);
-		width: 100%;
+		height: rem(24);
 		background-color: $body-bg;
-		color: $dark;
+		font-weight: 800;
+		font-size: 12px;
+		width: 65%;
+		outline: none;
 	}
 	&__btn{
 		color: inherit;
-		height: rem(20);
+		height: rem(17);
+		width: rem(17);
 		position: relative;
-		// border-radius: 23px;
-		background: none !important;
+		border-radius: 23px;
+		background-color: $body-bg;
+		border: 2px solid $info;
+		// background: none !important;
 		// border: none !important;
 		box-shadow: none !important;
 		outline: none !important;
-		background: transparent;
+		// background: transparent;
 		// padding-left: rem(8);
 		// padding-right: rem(8);
-		width: rem(25);
-		border: 1px solid $info;
-		border-radius: 50%;
+		// width: rem(26);
 		&::before,
 		&::after{
 			content: '';

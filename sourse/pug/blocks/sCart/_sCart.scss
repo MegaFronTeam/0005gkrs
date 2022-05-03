@@ -1,0 +1,235 @@
+// start .sCart
+.sCart {
+		--sPT: 0;
+		--sPB: #{rem(40)};
+		// --sTPB: ;
+	h1 {
+		margin-bottom: rem(34);
+	}
+	&__table-wrap, .form-wrap__item {
+		padding: rem(25) rem(31) rem(31);
+		background-color: $white;
+		border-radius: $border-radius;
+	}
+	&__table-wrap {
+		max-width: 878px;
+		padding-bottom: rem(14);
+		margin-bottom: rem(40);
+	}
+	table {
+		width: 100%;
+		a {
+			color: $body-color;
+		}
+	}
+	thead {
+		border-bottom: 2px solid $primary;
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
+	th {
+		padding-bottom: rem(9);
+		font-weight: 600;
+		font-size: 15px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: $info;
+	}
+
+	h2 {
+		margin-bottom: rem(28);
+		font-size: rem(28);
+	}
+	.form-wrap {
+		max-width: 878px;
+		&__item {
+			margin-bottom: rem(17);
+		}
+		&__item-title {
+			margin-bottom: rem(13);
+			font-weight: 800;
+			font-size: rem(19);
+		}
+		&__item-radio-title {
+			margin-bottom: rem(17);
+			font-weight: 800;
+			font-size: rem(19);
+		}
+		.form-check:not(:last-child) {
+			margin-bottom: 13px;
+		}
+		.form-check-input {
+			height: rem(24);
+			width: rem(24);
+			padding: rem(3);
+		}
+		.form-check-input:checked[type=radio] {
+			background-image: url('../img/svg/radio-check.svg');
+			background-size: 13px 8px;
+		}
+		.form-check-input[type=radio] {
+			border: none;
+		}
+		.form-check-label {
+			padding-left: rem(18);
+			font-size: 15px;
+			font-weight: 500;
+		}
+		&__input {			
+			padding-left: rem(20);
+			border: none;
+			&::placeholder {
+				font-weight: 500;
+				font-size: 16px;
+			}
+		}
+	}
+	&__table-wrap--right {
+		margin-bottom: rem(15);
+		tr {
+			vertical-align: middle;
+		}
+		td {
+			padding-bottom: rem(8);
+			font-weight: 600;
+			text-align: right;
+		}
+		th {
+			padding-bottom: rem(8);
+			font-size: 12px;
+		}
+		
+		// tr:last-child {
+			// 	border-top: 1px solid rgba($info, .3);
+			// }
+		}
+		&__summary {
+			border-top: 1px solid rgba($info, .3);
+			th {
+				vertical-align: bottom;
+				padding-bottom: rem(12);
+			}
+			td {
+			padding-top: rem(17);
+			padding-bottom: rem(12);
+			font-size: rem(28);
+		}
+	}
+	&__btn {
+		width: 100%;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCart
+
+.basket-item {
+	@include media-breakpoint-down(lg) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		&:not(:last-child) {
+			padding-bottom: 10px;
+			border-bottom: 1px solid $primary;
+		}
+	}
+	&__title {
+		@include media-breakpoint-down(xl) {
+			width: 30%;
+		}
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+	}
+	&__link {
+		@include media-breakpoint-down(lg) {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__amount {
+		@include media-breakpoint-down(xl) {
+			width: 100%;
+		}
+		@include media-breakpoint-down(lg) {
+			width:33%;
+		}
+	}
+	&__price,
+	&__value {
+		position: relative;
+		@include media-breakpoint-down(xl) {
+			width: 20%;
+		}
+		@include media-breakpoint-down(lg) {
+			width:33%;
+		}
+		&:before {
+			@include media-breakpoint-down(lg){
+				content: attr(data-label);
+				// float: left;
+				position: absolute;
+				text-transform: uppercase;
+				top: -5px;
+				font-weight: bold;
+				font-size: 12px;
+				color: $info;
+			}
+		}
+	}
+	&__price {
+		&:before {
+			@include media-breakpoint-down(lg) {
+				left: 0;
+			}
+		}
+	}
+	&__amount {
+		&:before {
+			@include media-breakpoint-down(lg) {
+				right: 0;
+			}
+		}
+	}
+	tr:not(:last-child) {
+		border-bottom: 1px solid rgba($info, .3);
+	}
+	td {
+		padding-top: 10px;
+		padding-bottom: 6px;
+		font-weight: 500;
+		font-size: 16px;
+	}
+	&__img-wrap, &__name {
+		display: inline-block;
+	}
+	&__name {
+		@include media-breakpoint-down(xl) {
+			width: 70%;
+		}
+	}
+	&__img-wrap {
+		margin-right: 10px;
+		max-width: 60px;
+		max-height: 60px;
+		@include media-breakpoint-down(lg) {
+			// width: 40%;
+		}
+	}
+	img {
+		object-fit: contain;
+	}
+	& &__value {
+		font-weight: 600;
+	}
+	// .addBlock {
+	// 	max-width: rem(116);
+	// 	background-color: $body-bg;
+	// 	border-radius: $border-radius;
+	// }
+}
