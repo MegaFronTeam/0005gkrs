@@ -1,0 +1,50 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sServices/_sServices.pug
+include ../blocks/sHaveQuestions/_sHaveQuestions.pug
+include ../blocks/sAboutCompany/_sAboutCompany.pug
+include ../blocks/sOurPhilosophy/_sOurPhilosophy.pug
+include ../blocks/sFeaturesOfWork/_sFeaturesOfWork.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '05-About-company.jpg'
+
+block title
+	- let  title= "О компании"
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+	+topLine
+	+top-nav()
+	+page-head('Главная', 'О компании')
+	+sAboutCompany
+	+sOurPhilosophy
+	+sFeaturesOfWork
+	//- +headerBlock
+	//- +sWhy()
+	//- +sSteps()
+	//- +sServices()
+	//- +sHowWeWork()
+	//- +sOurFaces
+	//- +sFaq
+	+sHaveQuestions()
+	+footer()
+      
+
+
+

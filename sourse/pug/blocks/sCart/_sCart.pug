@@ -5,32 +5,34 @@ mixin sCart(data)
 			h1 Корзина
 			.row.justify-content-between
 				.col-md-7.col-xl-9
-					+e.basket.table
-						table
-							thead
-								tr
-									th Название
-									th Цена
-									th Количество
-									th Стоимость
-							tbody
-								mixin basketItem(img,name,price,value)
-									+b.TR.basket-item
-										td.a(href="#")
-											+e.img-wrap
-												+img(`img/basket-img-${img}.png`)
-											+e.name!= name
-										+e.price.TD #{price} &#8381;
-										+e.amount.TD
-											+addblock()
-										+e.value.TD #{value} &#8381;
-								+basketItem('1','Урна для праха классическая белая','12 000','12 000')
-								+basketItem('1','Урна для праха классическая белая','12 000','12 000')
+					+e.basket
+						+e.table-wrap
+							table
+								thead
+									tr
+										th Название
+										th Цена
+										th.text-center Количество
+										th.text-end Стоимость
+								tbody
+									mixin basketItem(img,name,price,value)
+										+b.TR.basket-item
+											+e.title.TD
+												+e.link(href="#")
+													+e.img-wrap
+														+img(`img/basket-img-${img}.png`)
+													+e.name!= name
+											+e.price.TD(data-label="Цена") #{price} &#8381;
+											+e.amount.text-center.TD
+												+addblock()
+											+e.value.text-end.TD(data-label="Стоимость") #{value} &#8381;
+									+basketItem('1','Урна для праха классическая белая','12 000','12 000')
+									+basketItem('1','Урна для праха классическая белая','12 000','12 000')
 					+form-wrap()
 						+e.order-title.H2 Оформление заказа
 						+e.item
-							+e.item-title Способ Доставки
-							+in-c('radio','Курьером','shipping')
+							+e.item-radio-title Способ Доставки
+							+in-c('radio','Курьером','shipping')(checked)
 							+in-c('radio','Самовывоз','shipping')
 						+e.item
 							+e.item-title Адрес доставки
@@ -39,21 +41,22 @@ mixin sCart(data)
 							+e.item-title Получатель
 							+input('ФИО')
 						+e.item
-							+e.item-title Оплата
-							+in-c('radio','Картой сейчас','payment')
+							+e.item-radio-title Оплата
+							+in-c('radio','Картой сейчас','payment')(checked)
 							+in-c('radio','Картой при получении','payment')
 							+in-c('radio','Наличными при получении','payment')
 				.col-md-5.col-xl-3
-					table
-						tbody
-							tr
-								th Стоимость
-								td 24 000 &#8381;
-							tr
-								th Доставка
-								td 500 &#8381;
-							+e.summary.TR
-								th итого
-								td 24 500 &#8381;
+					+e.table-wrap--right
+						table
+							tbody
+								tr
+									th Стоимость
+									td 24 000 &#8381;
+								tr
+									th Доставка
+									td 500 &#8381;
+								+e.summary.TR
+									th итого
+									td 24 500 &#8381;
 					+btn('Совершить заказ','button').btn.btn-secondary
 	// end sCart
