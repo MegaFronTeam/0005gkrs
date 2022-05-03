@@ -1,0 +1,44 @@
+mixin sProduct(data)
+	// start sProduct
+	+b.SECTION.sProduct.section#sProduct&attributes(attributes)
+		.container
+			.row
+				.col-7
+					+e.sliders-wrap
+						.swiper.product-slider.product-slider--js
+								.swiper-wrapper
+									.swiper-slide
+										+e.img-wrap
+											+img('img/product-main-1.png')
+									.swiper-slide
+										+e.img-wrap
+											+img('img/product-main-1.png')
+									.swiper-slide
+										+e.img-wrap
+											+img('img/product-main-1.png')
+								+arrow()
+						.swiper.product-thumbs-slider.product-thumbs-slider--js
+							.swiper-wrapper
+								.swiper-slide
+									+img('img/product-thumbs-1.png')
+								.swiper-slide
+									+img('img/product-thumbs-2.png')
+				.col-5
+					+e.descr
+						+e.title.h2.H1 Гроб лакированный белый
+						+e.content
+							dl
+								dt Материал:
+								dd дуб, ткань
+								dt Цвет:
+								dd белый
+								dt Размеры:
+								dd
+									+select('','1,9','1,9','1,9')
+								dt Цена:
+								+e.value.DD 21 500 ₽
+							+addblock()
+							+btn('В корзину','button').btn.btn-secondary
+							+btn('Купить в 1 клик').btn.btn-primary
+							.small Ближайшая доставка: завтра (26 марта)
+	// end sProduct

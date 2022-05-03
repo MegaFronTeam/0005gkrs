@@ -17,6 +17,7 @@ include ../blocks/sPackages/_sPackages.pug
 include ../blocks/sFaq/_sFaq.pug
 include ../blocks/sHaveQuestions/_sHaveQuestions.pug
 include ../blocks/sCart/_sCart.pug
+include ../blocks/sProduct/_sProduct.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -29,7 +30,7 @@ block variables
 
 block title
 	- let  title= index.head.title
-	title= 'Корзина'
+	title= 'Гроб лакированный белый'
 block pagecontent
 	//- +mob-mnu()
 	
@@ -37,9 +38,9 @@ block pagecontent
 	+header()
 	+topLine
 	+top-nav()
-	+page-head('Главная', 'Корзина')
-	+sCart()
-	+sHaveQuestions('Остались вопросы?','')
+	+page-head('Главная', 'Гробы', title)
+	+sProduct()
+	+sHaveQuestions('Остались вопросы?','true')
 	+footer()
 
 

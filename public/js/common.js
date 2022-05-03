@@ -423,6 +423,24 @@ function eventHandler() {
 		slidesPerView: 'auto',
 	});
 
+	let productThumbsSlider = new Swiper(".product-thumbs-slider--js", {
+		spaceBetween: 10,
+		slidesPerView: 3,
+		freeMode: true,
+		watchSlidesProgress: true,
+	});
+	
+	let productSwiper = new Swiper('.product-slider--js', {
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		thumbs: {
+			swiper:productThumbsSlider,
+		},
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

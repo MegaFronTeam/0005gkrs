@@ -5,8 +5,8 @@ mixin sReferences(data)
 			+b.section-title.text-center
 				h2 Справочные данные
 			.tabs
-					.tabs__caption.active
-						.tabs__btn
+					.tabs__caption
+						.tabs__btn.active
 							h5 Морги
 						.tabs__btn
 							h5 Кладбища
@@ -19,7 +19,10 @@ mixin sReferences(data)
 							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1ef6a33a0537480fb5277d58b79e0e9c1c4d5dc23f0c9366d6cd6ed58e74cf45&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
 						+btn('Подробнее').btn.btn-secondary
 					.tabs__content
+						| Кладбища
 					.tabs__content
+						| Крематории
 					.tabs__content
+						| Колумбарии
 			.row
 	// end sReferences

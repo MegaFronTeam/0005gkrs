@@ -23,6 +23,12 @@
 			left: 0;
 		}
 	}
+	.tabs__content {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
 
 	.btn {
 		padding: rem(20) rem(60);
