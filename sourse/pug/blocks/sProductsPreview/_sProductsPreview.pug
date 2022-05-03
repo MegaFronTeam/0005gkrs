@@ -1,11 +1,12 @@
-mixin sProductsPreview(data)
+mixin sProductsPreview(h2,descr,btn)
 	// start sProductsPreview
 	+b.SECTION.sProductsPreview.section#sProductsPreview&attributes(attributes)
 		.container
 			+e.wrap.text-center
 				+b.section-title.text-center
-					h2 У&nbsp;нас можно приобрести необходимые предметы
-					p Поможем организовать достойные похороны
+					h2!= h2
+					if descr
+						p Поможем организовать достойные похороны
 				.tabs
 					.tabs__caption
 						.tabs__btn.active
@@ -68,5 +69,6 @@ mixin sProductsPreview(data)
 										+e.title Гроб лакированный белый
 										p от #[span 28 000] руб.
 										+e.btn(href="#").btn Подробнее
-				a(href="#").btn.btn-secondary Смотреть все
+				if btn
+					a(href="#").btn.btn-secondary Смотреть все
 	// end sProductsPreview
