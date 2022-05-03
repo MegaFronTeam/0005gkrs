@@ -1,0 +1,62 @@
+// start .sAboutCompany
+.sAboutCompany {
+	--sPT: #{rem(14)};
+	--sPB: #{rem(107)};
+	// --sTPB: ;
+	position: relative;
+	// overflow: hidden;
+	img {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+	.section-title {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(22);
+		}
+		h1 {
+			margin-bottom: rem(30);
+		}
+		p {
+			color: $dark;
+			line-height: 1.60em;
+		}
+	}
+	&__col-wrap {
+		@include media-breakpoint-up(lg) {
+			&:not(:last-of-type) {
+				position: relative;
+				&:after {
+						content: '';
+						position: absolute;
+						display: block;
+						height: rem(114);
+						width: 1px;
+						background-color: rgba($color: $info, $alpha: .2);
+						right: 0;
+						top: 50%;
+						transform: translatey(-50%);
+				}
+			}
+		}
+		}
+	&__num {
+		color: $blue;
+		font-size: rem(48);
+		span {
+			font-size: rem(32);
+		}
+	}
+	&__text {
+		font-size: rem(16);
+		color: $info;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAboutCompany

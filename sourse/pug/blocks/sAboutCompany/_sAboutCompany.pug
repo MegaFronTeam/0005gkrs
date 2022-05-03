@@ -1,0 +1,21 @@
+mixin sAboutCompany(data)
+	// start sAboutCompany
+	+b.SECTION.sAboutCompany.section#sAboutCompany&attributes(attributes)
+		.container
+			+b.section-title 
+				.row
+					.col-lg-6
+						h1 О компании
+						p Утрата близкого человека&nbsp;&mdash; тяжелое испытание в&nbsp;жизни, которое сопровождается ощущением горя и&nbsp;пустоты. Чтобы пережить потерю, потребуется немало времени. Браться за&nbsp;организацию похорон в&nbsp;такие моменты тяжело. Именно поэтому существует наша компания&nbsp;&mdash; Городская Круглосуточная Ритуальная Служба. Мы&nbsp;берем на&nbsp;себя все хлопоты по&nbsp;организации последнего пути человека.
+			.row
+				+e.col-wrap.col-lg-2.text-center
+					+e.num 15 #[span лет]
+					+e.text на рынке<br>ритуальных услуг 
+				+e.col-wrap.col-lg-2.text-center 
+					+e.num 14 000
+					+e.text  клиентов<br> к нам обратилось 
+				+e.col-wrap.col-lg-2.text-center 
+					+e.num #[span >] 20
+					+e.text партнёров сотрудничает с нами
+		+img('img/AboutCompany-img-1.png')
+	// end sAboutCompany

@@ -108,5 +108,11 @@
 				color: $info;
 			}
 		}
+		& + & {
+			padding-left: rem(17);
+			&:before {
+				padding-right: rem(17);
+			}
+		}
 	}
 }

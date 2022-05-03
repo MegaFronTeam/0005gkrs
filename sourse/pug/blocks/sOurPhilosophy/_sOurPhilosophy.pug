@@ -1,0 +1,24 @@
+mixin sOurPhilosophy(data)
+	// start sOurPhilosophy
+	+b.SECTION.sOurPhilosophy.section#sOurPhilosophy&attributes(attributes)
+		.container
+			+e.wrap
+				.row
+					.col-xl
+						h2 Наша философия
+						p Похороны человека&nbsp;&mdash; это не&nbsp;просто совокупность услуг, это целое событие, несущее сакральный смысл. Нашей миссией является организация достойного сопровождения усопшего в&nbsp;его последний путь, а&nbsp;также проявление заботы о&nbsp;его близких. Мы&nbsp;проводим честную, лояльную и&nbsp;открытую политику компании.
+					.col-xl-auto
+						+e.wrap-principles
+							h3 Наши принципы
+							ul
+								li
+									+icon('check-icon')
+									| Высококвалифицированные специалисты берут на себя всю организацию;
+								li
+									+icon('check-icon')
+									| Многолетний опыт помогает сделать работу быстро и качественно;
+								li
+									+icon('check-icon')
+									| Мы заботимся о наших клиентах; гарантируем качество.
+							+img('img/svg/info.svg')
+	// end sOurPhilosophy
