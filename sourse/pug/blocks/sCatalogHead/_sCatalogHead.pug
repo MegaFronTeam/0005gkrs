@@ -1,0 +1,34 @@
+mixin servicesItem(icon, title)
+	.col-xl-6
+		a(href="#")
+			+icon(icon)
+			+e.text-wrap
+				h6!= title
+				p Цена от #[span 000] руб.
+
+mixin listOfServices()
+	+b.list-of-services
+		+e.row.row
+			+servicesItem('service-icon-1', 'Гробы')
+			+servicesItem('service-icon-2', 'Памятники')
+			+servicesItem('service-icon-3', 'Кресты')
+			+servicesItem('service-icon-4', 'Венки')
+			+servicesItem('service-icon-5', 'Урны')
+			+servicesItem('service-icon-6', 'Портреты и рамки')
+			+servicesItem('service-icon-7', 'Одежда')
+			+servicesItem('service-icon-8', 'Текстиль')
+			+servicesItem('service-icon-9', 'Аксессуары')
+
+mixin sCatalogHead(data)
+	// start sCatalogHead
+	+b.SECTION.sCatalogHead.section#sCatalogHead&attributes(attributes)
+		.container
+			+e.wrap
+				.row
+					.col-auto
+						+b.section-title
+							h1 Каталог
+							p Разнообразный и&nbsp;богатый опыт начало повседневной работы по&nbsp;формированию позиции играет важную роль в&nbsp;формировании системы обучения кадров, соответствует насущным потребностям. Товарищи! начало повседневной работы по&nbsp;формированию позиции влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации систем массового участия.
+					.col
+						+listOfServices()
+	// end sCatalogHead

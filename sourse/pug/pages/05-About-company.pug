@@ -11,6 +11,7 @@ include ../blocks/sHaveQuestions/_sHaveQuestions.pug
 include ../blocks/sAboutCompany/_sAboutCompany.pug
 include ../blocks/sOurPhilosophy/_sOurPhilosophy.pug
 include ../blocks/sFeaturesOfWork/_sFeaturesOfWork.pug
+include ../blocks/sServicesSlider/_sServicesSlider.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -35,6 +36,7 @@ block pagecontent
 	+sAboutCompany
 	+sOurPhilosophy
 	+sFeaturesOfWork
+	+sServicesSlider2
 	//- +headerBlock
 	//- +sWhy()
 	//- +sSteps()
@@ -42,7 +44,7 @@ block pagecontent
 	//- +sHowWeWork()
 	//- +sOurFaces
 	//- +sFaq
-	+sHaveQuestions()
+	+sHaveQuestions('', 'Вызов ритуального агента')
 	+footer()
       
 

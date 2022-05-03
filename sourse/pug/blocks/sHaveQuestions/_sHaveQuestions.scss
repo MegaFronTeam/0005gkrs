@@ -4,10 +4,11 @@
 	--sPB: #{rem(100)};
 	// --sTPB: ;
 	.section-title {
-		margin-bottom: rem(29);
+		margin-bottom: rem(34);
 		p {
-			@include media-breakpoint-down(md) {
-				font-size: rem(15);
+			font-size: rem(15);
+			@include media-breakpoint-up(md) {
+				font-size: rem(19);
 			}
 		}
 	}
@@ -32,11 +33,14 @@
 			@include media-breakpoint-down(sm) {
 				margin-bottom: rem(15);
 			}
+			&-wrap {
+				width: 100%;
+    		max-width: 300px;
+			}
 		}
 		button {
-			@include media-breakpoint-down(sm) {
-				width: 100%;
-			}
+			width: 100%;
+    	max-width: 217px;
 		}
 	}
 	&__text {

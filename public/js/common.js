@@ -423,6 +423,25 @@ function eventHandler() {
 		slidesPerView: 'auto',
 	});
 
+	var $range = $(".js-range-slider"),
+	instance,
+	min = 499,
+	max = 200548;
+
+	$range.ionRangeSlider({
+		skin: "round",
+		type: "double",
+		min: min,
+		max: max,
+		from: 800,
+		to: 100000,
+	});
+	instance = $range.data("ionRangeSlider");
+
+	$('.sFilter__headline').on('click', function () {
+		$('.sFilter__block').toggleClass('active');
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

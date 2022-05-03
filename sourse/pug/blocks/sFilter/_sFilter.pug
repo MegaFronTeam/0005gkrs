@@ -1,0 +1,81 @@
+mixin sFilter(data)
+	// start sFilter
+	+b.sFilter#sFilter&attributes(attributes)
+		+e.headline.d-lg-none
+			p.h6 Фильтры
+		+e.block
+			+e.headline
+				p.h6 Фильтры
+			+ddGroup()
+				+ddGroupItem('dd-arrow-up', 'Цена ₽', 'active')
+					+e.range-wrap
+						.range-slider
+							input.js-range-slider(type='text' value='')
+						+e.range-info
+							span от 499 ₽
+							span до 200 548 ₽
+				+ddGroupItem('dd-arrow-up', 'Бренд:', 'active')
+					+e.wrap
+						+in-c("checkbox", 'Гробы')
+						+in-c("checkbox", 'Урны')
+						+in-c("checkbox", 'Кресты')
+						+in-c("checkbox", 'Памятники')
+						+in-c("checkbox", 'Венки')
+						+in-c("checkbox", 'Портреты и рамки')
+						+in-c("checkbox", 'Одежда')
+						+in-c("checkbox", 'Текстиль')
+						+in-c("checkbox", 'Аксессуары')
+				+ddGroupItem('dd-arrow-up', 'Размер:')
+					+e.wrap
+						+in-c("checkbox", 'Гробы')
+						+in-c("checkbox", 'Урны')
+						+in-c("checkbox", 'Кресты')
+						+in-c("checkbox", 'Памятники')
+						+in-c("checkbox", 'Венки')
+						+in-c("checkbox", 'Портреты и рамки')
+						+in-c("checkbox", 'Одежда')
+						+in-c("checkbox", 'Текстиль')
+						+in-c("checkbox", 'Аксессуары')
+				+ddGroupItem('dd-arrow-up', 'Материал:')
+					+e.wrap
+						+in-c("checkbox", 'Гробы')
+						+in-c("checkbox", 'Урны')
+						+in-c("checkbox", 'Кресты')
+						+in-c("checkbox", 'Памятники')
+						+in-c("checkbox", 'Венки')
+						+in-c("checkbox", 'Портреты и рамки')
+						+in-c("checkbox", 'Одежда')
+						+in-c("checkbox", 'Текстиль')
+						+in-c("checkbox", 'Аксессуары')
+				+ddGroupItem('dd-arrow-up', 'Цвет:')
+					+e.wrap
+						+in-c("checkbox", 'Гробы')
+						+in-c("checkbox", 'Урны')
+						+in-c("checkbox", 'Кресты')
+						+in-c("checkbox", 'Памятники')
+						+in-c("checkbox", 'Венки')
+						+in-c("checkbox", 'Портреты и рамки')
+						+in-c("checkbox", 'Одежда')
+						+in-c("checkbox", 'Текстиль')
+						+in-c("checkbox", 'Аксессуары')
+				+ddGroupItem('dd-arrow-up', 'Производитель:')
+					+e.wrap
+						+in-c("checkbox", 'Гробы')
+						+in-c("checkbox", 'Урны')
+						+in-c("checkbox", 'Кресты')
+						+in-c("checkbox", 'Памятники')
+						+in-c("checkbox", 'Венки')
+						+in-c("checkbox", 'Портреты и рамки')
+						+in-c("checkbox", 'Одежда')
+						+in-c("checkbox", 'Текстиль')
+						+in-c("checkbox", 'Аксессуары')
+			+e.button-wrap
+				button.btn.btn-white Сбросить
+				button.btn.btn-primary показать
+			+b.advice-form
+				+img('img/profile-pic.png')
+				.h6 Ярослав
+				p Консультант<br>ритуальных услуг
+				a(href="#").btn.btn-secondary Позвонить
+				+soc()
+	// end sFilter

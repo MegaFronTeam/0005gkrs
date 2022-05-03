@@ -1,7 +1,7 @@
 // start .sServicesSlider
 .sServicesSlider {
 	--sPT:#{rem(50)} ;
-	// --sPB: ;
+	--sPB: #{rem(50)};
 	// --sTPB: 0;
 	.container {
 		position: relative;
@@ -60,6 +60,21 @@
 		}
 		&-prev {
 			left: -52px;
+		}
+	}
+	&--2 {
+		.section-title {
+			margin-bottom: rem(16);
+		}
+		.swiper-slide {
+			height: auto;
+		}
+		.sServicesSlider__wrap {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: rem(45) 0;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

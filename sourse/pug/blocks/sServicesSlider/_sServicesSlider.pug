@@ -23,3 +23,26 @@ mixin sServicesSlider(data)
 						+servicesSlide('4','Необходимые документы','price','Подробнее')
 			+arrow()
 	// end sServicesSlider
+
+
+mixin servicesSlide2(img)
+	+e.wrap
+		+img(`img/${img}`)
+mixin sServicesSlider2(data)
+	// start sServicesSlider
+	+b.SECTION.sServicesSlider--2.section#sServicesSlider&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 СМИ о нас
+			+e.slider--js.swiper
+				.swiper-wrapper
+					.swiper-slide
+						+servicesSlide2('sServicesSlider-img-1.png')
+					.swiper-slide
+						+servicesSlide2('sServicesSlider-img-2.png')
+					.swiper-slide
+						+servicesSlide2('sServicesSlider-img-3.png')
+					.swiper-slide
+						+servicesSlide2('sServicesSlider-img-4.png')
+			+arrow()
+	// end sServicesSlider

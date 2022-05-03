@@ -1,0 +1,14 @@
+mixin sCatalogBody(data)
+	// start sCatalogBody
+	+b.sCatalogBody.section#sCatalogBody&attributes(attributes)
+		.row
+			.col-lg-4
+				+e.card-wrap
+					+img('img/sProducts-img-1.png')
+					.h6 Гробы обитые тканью
+					+e.size Размер: 1.9 м
+					p #[span 36 000] руб.
+					+e.add-to-card
+						+addblock()
+						a(href="#").btn.btn-primary в корзину
+	// end sCatalogBody

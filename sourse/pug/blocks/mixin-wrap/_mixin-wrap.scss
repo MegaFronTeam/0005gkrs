@@ -49,38 +49,56 @@
 }
 
 
-
+.addBlock {
+	// width: 100%;
+	// border: none;
+	// border-radius: 8px;
+	// background-color: $body-bg;
+	input {
+		// width: 100%;
+		// background-color: $body-bg;
+	}
+}
 
 .addBlock{
-	color: var(--color, #{$primary});
-	border: 1px solid;
-	border-radius: 23px;
+	color: var(--color, #{$info});
+	// border: 1px solid;
+	border-radius: 8px;
+	background-color: $body-bg;
 	display: flex;
+	align-items: center;
 	position: relative;
 	overflow: hidden;
+	width: 100%;
+	padding: 0 5px;
 	input{
 		color: inherit;
 		text-align: center;
 		border: none;
-		height: rem(45);
+		height: rem(42);
+		width: 100%;
+		background-color: $body-bg;
+		color: $dark;
 	}
 	&__btn{
 		color: inherit;
-		height: rem(45);
+		height: rem(20);
 		position: relative;
-		border-radius: 23px;
+		// border-radius: 23px;
 		background: none !important;
-		border: none !important;
+		// border: none !important;
 		box-shadow: none !important;
 		outline: none !important;
 		background: transparent;
 		// padding-left: rem(8);
 		// padding-right: rem(8);
-		width: rem(26);
+		width: rem(25);
+		border: 1px solid $info;
+		border-radius: 50%;
 		&::before,
 		&::after{
 			content: '';
-			width: 10px;
+			width: 8px;
 			height: 2px; 
 			background-color: currentColor;
 			@include a-cent;

@@ -1,0 +1,48 @@
+// start .sCatalogBody
+.sCatalogBody {
+	--sPT: 0;
+	--sPB: 0;
+	// --sTPB: ;
+	&__card-wrap {
+		background-color: #fff;
+		border-radius: 8px;
+		text-align: center;
+		padding: rem(19) rem(24) rem(26);
+		img {
+			width: 100%;
+		}
+		p {
+			margin-bottom: rem(12);
+			color: $info;
+			span {
+				color: $blue;
+				font-size: rem(19);
+				font-weight: 900;
+			}
+		}
+	}
+	&__size {
+		font-size: rem(16);
+		color: $info;
+		font-weight: 500;
+		margin-bottom: rem(12);
+	}
+	&__add-to-card {
+		display: flex;
+		justify-content: space-between;
+		.addBlock {
+			max-width: rem(93);
+		}
+		a {
+			font-size: rem(12);
+			padding: rem(11) rem(24);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCatalogBody
