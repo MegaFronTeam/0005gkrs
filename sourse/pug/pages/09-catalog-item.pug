@@ -18,6 +18,7 @@ include ../blocks/sFaq/_sFaq.pug
 include ../blocks/sHaveQuestions/_sHaveQuestions.pug
 include ../blocks/sCart/_sCart.pug
 include ../blocks/sProduct/_sProduct.pug
+include ../blocks/sGetMore/_sGetMore.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -40,6 +41,7 @@ block pagecontent
 	+top-nav()
 	+page-head('Главная', 'Гробы', title)
 	+sProduct()
+	+sGetMore()
 	+sHaveQuestions('Остались вопросы?','true')
 	+footer()
 

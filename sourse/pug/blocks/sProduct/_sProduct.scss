@@ -3,6 +3,9 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	.row {
+		margin-bottom: rem(70);
+	}
 	&__sliders-wrap, &__descr {
 		height: 100%;
 		background-color: $white;
@@ -11,6 +14,12 @@
 	}
 	&__sliders-wrap {
 		padding: rem(23);
+	}
+	.swiper-slide {
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	&__img-wrap {
 		display: flex;
@@ -23,7 +32,7 @@
 		}
 	}
 	.swiper-button-hand {
-    align-items: center;
+		align-items: center;
     border: none;
     color: #aaaebe;
     display: flex;
@@ -41,17 +50,22 @@
 		}
 	}
 	&__descr {
-		padding: rem(50) rem(60);
+		padding: rem(51) rem(60);
 	}
 	&__content {
 		display: flex;
 		flex-wrap: wrap;
 		max-width: 298px;
 	}
+	h1 {
+		margin-bottom: rem(8);
+		line-height: 140%;
+	}
 	dl {
 		width: 100%;
 		display: grid;
-		grid-template-columns: auto 1fr;
+		grid-template-columns:42% auto;
+		grid-template-rows: repeat(3, 40px) 50px;
 		align-items: end;
 	}
 	dt {
@@ -65,21 +79,25 @@
 	}
 	dd {
 		display: inline;
-		margin: 0 0 0 1em;
+		margin: 0;
 		font-weight: 500;
 		font-size: 16px;
 	}
-
+	
 	& &__value {
 		font-weight: 600;
 		font-size: 28px;
 	}
-
+	
 	.form-control {
-		padding: 0 5px;
+		padding: 0 20px 0 0;
 		border: none;
 		background-color: transparent;
-		// ::after
+		font-weight: 500;
+		font-size: 16px;
+		background-image: url('../img/svg/select-arrow.svg');
+		background-repeat: no-repeat;
+		background-position: right center;
 	}
 	.addBlock {
 		margin: 0 auto rem(15) 0;
@@ -90,9 +108,22 @@
 	.btn-primary {
 		width: 100%;
 	}
-
+	
 	.small {
 		font-size: 14px;
+	}
+	
+	.tabs {
+		&__caption {
+			justify-content: flex-start;
+			margin-bottom: rem(30);
+		}
+		p {
+			text-align: left;
+			font-weight: 500;
+			font-size: rem(19);
+			color: $info;
+		}
 	}
 	
 	@include media-breakpoint-up(xl) {}
@@ -105,12 +136,15 @@
 } // end.sProduct
 .product-thumbs-slider {
 	.swiper-slide {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		border: 5px solid transparent;
 	}
 	img {
+		max-width: 100%;
 		max-height: 121px;
 		object-fit: contain;
+	}
+	& .swiper-slide-thumb-active {
+		border: 5px solid rgba(0, 165, 241, 0.1);
+		border-radius: 8px;
 	}
 }

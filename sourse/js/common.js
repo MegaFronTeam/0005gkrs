@@ -443,7 +443,7 @@ function eventHandler() {
 	});
 	let productThumbsSlider = new Swiper(".product-thumbs-slider--js", {
 		spaceBetween: 10,
-		slidesPerView: 3,
+		slidesPerView: 4,
 		freeMode: true,
 		watchSlidesProgress: true,
 	});
