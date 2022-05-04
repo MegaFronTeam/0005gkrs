@@ -1,0 +1,23 @@
+mixin sArticles-item(img, title)
+	.col-sm-6.col-lg-4
+		+e.wrap.text-center(href="#")
+			+e.img-wrap
+				+img(`img/sArticles-img-${img}.jpg`, 'bg')
+			h5!= title
+			p 24.11.2020
+			//- p В&nbsp;этой статье мы&nbsp;рассмотрим основные способы погребения людей, особенности захоронений, их&nbsp;достоинства и&nbsp;недостатки, а&nbsp;также среднюю стоимость.
+
+mixin sArticles(data)
+	// start sArticles
+	+b.SECTION.sArticles.section#sArticles&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Статьи
+			+e.row.row
+				+sArticles-item(1, 'Способы погребения человека')
+				+sArticles-item(2, 'Правила захоронения урны с прахом')
+				+sArticles-item(3, 'Справка о захоронении - как ее получить')
+				+sArticles-item(1, 'Правила захоронения урны с прахом')
+				+sArticles-item(4, 'Правила захоронения урны с прахом')
+				+sArticles-item(5, 'Справка о захоронении - как ее получить')
+	// end sArticles

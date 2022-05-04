@@ -1,0 +1,136 @@
+// start .sCalculator
+.sCalculator {
+	--sPT: #{rem(14)};
+	--sPB: #{rem(50)};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(100)};
+	}
+	// --sTPB: ;
+	.section-title {
+		margin-bottom: rem(43.100);
+	}
+	&__row {
+		--bs-gutter-y: #{rem(21.600)};
+	}
+	&__input-wrap {
+		text-align: left;
+		label {
+			width: 100%;
+		}
+	}
+	h3 {
+		margin-bottom: rem(26.700);
+	}
+	&__text {
+		font-size: rem(16);
+		font-weight: 600;
+		color: $dark;
+		margin-bottom: rem(13.800);
+	}
+	.tabs {
+		border-bottom: 2px solid $blue;
+		padding-bottom: rem(40);
+		margin-bottom: rem(30);
+		&__caption {
+			margin-bottom: rem(53.700);
+		}
+		&__btn {
+			font-size: 19px;
+    	font-weight: 800;
+		}
+	}
+	&__wrap {
+		&:not(:last-child) {
+			margin-bottom: rem(30.100);
+		}
+	}
+	&__title {
+		color: $info;
+		font-size: rem(15);
+		margin-bottom: rem(10);
+		display: inline-block;
+	}
+	&__input {
+		padding: rem(20);
+		color: $info;
+		background-color: #fff;
+		border: none;
+		&:active, &:focus {
+			background-color: #fff;
+			color: $info;
+		}
+		option {
+			font-weight: 500;
+			font-size: rem(15);
+		}
+	}
+	&__select-wrap {
+		position: relative;
+		color: $dark;
+		.icon {
+			transform: rotate(180deg);
+			position: absolute;
+			right: rem(11.500);
+			bottom: rem(18);
+			font-size: rem(27.4);
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 2px;
+		}
+	}
+	&__result {
+		p {
+			text-align: center;
+			font-size: rem(20);
+			margin-bottom: rem(33);
+			span {
+				font-size: rem(26);
+				font-weight: 800;
+				color: $blue;
+			}
+		}
+		form {
+			@include media-breakpoint-up(sm) {
+				display: flex;
+				justify-content: center;
+				align-self: center;
+				flex-wrap: wrap;
+				gap: rem(30);
+			}
+		}
+		.form-wrap {
+			&__input {
+				background-color: $body-bg;
+				color: $info;
+				text-align: center;
+				&::placeholder {
+					color: $info;
+				}
+				background-color: $white;
+				border: none;
+				&::placeholder {
+					text-transform: uppercase;
+					letter-spacing: 0.1em;
+				}
+				@include media-breakpoint-down(sm) {
+					margin-bottom: rem(15);
+				}
+				&-wrap {
+					width: 100%;
+					max-width: 300px;
+				}
+			}
+			button {
+				width: 100%;
+				max-width: 300px;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCalculator

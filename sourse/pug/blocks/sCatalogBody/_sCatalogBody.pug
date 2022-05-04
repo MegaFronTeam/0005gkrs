@@ -36,9 +36,41 @@ mixin sCatalogBody-item-slider()
 				+addblock()
 				a(href="#").btn.btn-primary в корзину
 
-mixin sCatalogBody(data)
+mixin sCatalogBody(types)
 	// start sCatalogBody
 	+b.sCatalogBody.section#sCatalogBody&attributes(attributes)
+		if types
+			+e.row-types.row
+				+e.col-types--js.col-auto
+					a(href="#").btn Гробы мусульманские
+				+e.col-types--js.col-auto
+					a(href="#").btn.active Гробы элитные
+				+e.col-types--js.col-auto
+					a(href="#").btn Цинковые гробы
+				+e.col-types--js.col-auto
+					a(href="#").btn Детские гробы
+				+e.col-types--js.col-auto
+					a(href="#").btn Гробы свыше 2 м
+				+e.col-types--js.col-auto
+					a(href="#").btn Деревянные гробы
+				+e.col-types--js.col-auto
+					a(href="#").btn Обитые тканью гробы
+				+e.col-types--js.col-auto.btn-show-more
+					a(href="#").btn Показать еще
+				+e.col-types--js.col-auto
+					a(href="#").btn Гробы мусульманские
+				+e.col-types--js.col-auto
+					a(href="#").btn Гробы элитные
+				+e.col-types--js.col-auto
+					a(href="#").btn Цинковые гробы
+				+e.col-types--js.col-auto
+					a(href="#").btn Детские гробы
+				+e.col-types--js.col-auto
+					a(href="#").btn Гробы свыше 2 м
+				+e.col-types--js.col-auto
+					a(href="#").btn Деревянные гробы
+				+e.col-types--js.col-auto
+					a(href="#").btn Обитые тканью гробы
 		+e.row.row
 			.col 
 				+select('Сортировать по:', 'Цене', 'Цене', 'Цене', 'Цене')

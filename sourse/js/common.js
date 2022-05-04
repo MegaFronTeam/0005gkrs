@@ -474,6 +474,13 @@ function eventHandler() {
 		},
 	});
 
+	$('.btn-show-more').click(function() {
+		$('.sCatalogBody__col-types--js:hidden').slideDown(function() {
+			$(this).addClass('active');
+		});
+		$('.btn-show-more').addClass('hidden');
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

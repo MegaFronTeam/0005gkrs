@@ -1,0 +1,54 @@
+// start .sArticles
+.sArticles {
+	--sPT: #{rem(12.700)};
+	--sPB: #{rem(50)};
+	// --sTPB: ;
+	.section-title {
+		margin-bottom: rem(30.100);
+		h1 {
+			margin-bottom: 0;
+		}
+	}
+	&__row {
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	&__wrap {
+		@include mt;
+		&:hover{
+			.sArticles__img-wrap {
+				// --ratio: 184/408;
+			}
+			h5 {
+				color: $indigo;
+				text-decoration: underline;
+			}
+		}
+		h5 {
+			@include mt;
+			margin-bottom: rem(16.400);
+			color: $dark;
+		}
+		p {
+			color: $info;
+			margin-bottom: 0;
+		}
+	}
+	&__img-wrap {
+		@include block(408, 294);
+		@include mt;
+		margin-bottom: rem(23.729);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 8px;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sArticles

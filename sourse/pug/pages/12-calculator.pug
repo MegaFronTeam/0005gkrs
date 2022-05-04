@@ -1,0 +1,48 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sWhy/_sWhy.pug
+//- include ../blocks/sSteps/_sSteps.pug
+//- include ../blocks/sServices/_sServices.pug
+//- include ../blocks/sProductsPreview/_sProductsPreview.pug
+//- include ../blocks/sReferences/_sReferences.pug
+//- include ../blocks/sHowWeWork/_sHowWeWork.pug
+//- include ../blocks/sOurFaces/_sOurFaces.pug
+//- include ../blocks/sPackages/_sPackages.pug
+//- include ../blocks/sFaq/_sFaq.pug
+//- include ../blocks/sHaveQuestions/_sHaveQuestions.pug
+//- include ../blocks/sCart/_sCart.pug
+//- include ../blocks/sProduct/_sProduct.pug
+//- include ../blocks/sArticles/_sArticles.pug
+include ../blocks/sCalculator/_sCalculator.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '12-calculator.jpg'
+
+block title
+	- let  title= 'Калькулятор'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+	+topLine
+	+top-nav()
+	+page-head('Главная', title)
+	+sCalculator
+	//- +sHaveQuestions('Остались вопросы?')
+	+footer()
+
+

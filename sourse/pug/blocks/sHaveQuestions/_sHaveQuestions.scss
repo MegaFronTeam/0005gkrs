@@ -56,6 +56,20 @@
 			text-decoration: underline;
 		}
 	}
+	&__wrap {
+		background-color: #fff;
+		border-radius: 8px;
+		padding: rem(90) rem(10);
+		.form-wrap {
+			&__input {
+				background-color: $body-bg;
+				color: $info;
+				&::placeholder {
+					color: $info;
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
