@@ -1,14 +1,61 @@
+mixin sCatalogBody-item()
+	.col-md-6.col-xl-4
+		+e.card-wrap
+			+img('img/sProducts-img-1.png')
+			+e.title.h6 Гробы обитые тканью
+			+e.size Размер: 1.9 м
+			p #[span 36 000] руб.
+			+e.add-to-card
+				+addblock()
+				a(href="#").btn.btn-primary в корзину
+
+mixin sCatalogBody-banner()
+	.col-md-6.col-xl-4
+		+e.card-wrap--banner
+			+img('img/sCatalogBody-img-1.png', 'bg')
+			+e.title Пенсионерам #[span скидка 10%]
+			a(href="#").btn.btn-secondary Подробнее
+
+mixin sCatalogBody-item-slider()
+	.col-md-6.col-xl-4
+		+e.card-wrap
+			+e.slider--js.swiper
+				.swiper-wrapper
+					.swiper-slide
+						+img('img/sProducts-img-1.png')
+					.swiper-slide
+						+img('img/sProducts-img-1.png')
+					.swiper-slide
+						+img('img/sProducts-img-1.png')
+				+arrow()
+				.swiper-pagination
+			+e.title.h6 Гробы обитые тканью
+			+e.size Размер: 1.9 м
+			p #[span 36 000] руб.
+			+e.add-to-card
+				+addblock()
+				a(href="#").btn.btn-primary в корзину
+
 mixin sCatalogBody(data)
 	// start sCatalogBody
 	+b.sCatalogBody.section#sCatalogBody&attributes(attributes)
-		.row
-			.col-lg-4
-				+e.card-wrap
-					+img('img/sProducts-img-1.png')
-					.h6 Гробы обитые тканью
-					+e.size Размер: 1.9 м
-					p #[span 36 000] руб.
-					+e.add-to-card
-						+addblock()
-						a(href="#").btn.btn-primary в корзину
+		+e.row.row
+			.col 
+				+select('Сортировать по:', 'Цене', 'Цене', 'Цене', 'Цене')
+			.col-auto
+				+select('Показать по:', '40', '40', '40', '40')
+		+e.row-cards.row
+			+sCatalogBody-item
+			+sCatalogBody-item
+			+sCatalogBody-item-slider
+			+sCatalogBody-item
+			+sCatalogBody-item
+			+sCatalogBody-banner
+			+sCatalogBody-item
+			+sCatalogBody-item
+			+sCatalogBody-item
+			.col-12
+				+e.show-more(href="#").btn.btn-outline-info ПОКАЗАТЬ ЕЩЕ
+			.col-12 
+				+pugin
 	// end sCatalogBody

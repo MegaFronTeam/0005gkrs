@@ -440,6 +440,7 @@ function eventHandler() {
 
 	$('.sFilter__headline').on('click', function () {
 		$('.sFilter__block').toggleClass('active');
+		$('body').toggleClass('fixed');
 	});
 	let productThumbsSlider = new Swiper(".product-thumbs-slider--js", {
 		spaceBetween: 10,
@@ -456,6 +457,20 @@ function eventHandler() {
 		},
 		thumbs: {
 			swiper:productThumbsSlider,
+		},
+	});
+
+	const sCatalogBodySwiper = new Swiper('.sCatalogBody__slider--js', {
+		slidesPerView: '1',
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.sCatalogBody__slider .swiper-button-next',
+			prevEl: '.sCatalogBody__slider .swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
 		},
 	});
 
