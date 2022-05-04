@@ -393,12 +393,6 @@ function eventHandler() {
 			prevEl: '.sServicesSlider .swiper-button-prev',
 		},
 		breakpoints: {
-			// 344: {
-			// 	slidesPerView: 2,
-			// },
-			// 576: {
-			// 	slidesPerView: 3,
-			// },
 			768: {
 				slidesPerView: 2,
 			},
@@ -407,6 +401,23 @@ function eventHandler() {
 			},
 			1200: {
 				slidesPerView: 4,
+			},
+		},
+	});
+	const sGetMoreSwiper = new Swiper('.sGetMore__slider--js', {
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 31,
+		navigation: {
+			nextEl: '.sGetMore .swiper-button-next',
+			prevEl: '.sGetMore .swiper-button-prev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
 			},
 		},
 	});
@@ -444,7 +455,7 @@ function eventHandler() {
 	});
 	let productThumbsSlider = new Swiper(".product-thumbs-slider--js", {
 		spaceBetween: 10,
-		slidesPerView: 3,
+		slidesPerView: 4,
 		freeMode: true,
 		watchSlidesProgress: true,
 	});

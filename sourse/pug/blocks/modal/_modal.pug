@@ -6,12 +6,18 @@ mixin modal()
 		+b.modal-win
 			+form-wrap
 				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+					+e.title.form-data.h3.ttu Вызвать ритуального агента
+					p.after-headline Оставьте контактные данные и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение 10&nbsp;минут.
+					+e.soc-title Способ связи:
+					+modalSoc()
+						+item-sos('telegram')
+						+item-sos('viber')
+						+item-sos('whatsapp')
+						+item-sos('phone')
+					+input('+7 (___) ___-__-__', 'tel')
+					button(type="submit").btn.btn-secondary Отправить
+					+e.text Нажимая «Отправить», Вы соглашаетесь с #[a(href="#") политикой конфиденциальности данных].
 
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
 	// #modal-call
 	
 	// end modals

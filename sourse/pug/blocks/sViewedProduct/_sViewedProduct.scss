@@ -1,0 +1,22 @@
+// start .sViewedProduct
+.sViewedProduct {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	.row {
+		--bs-gutter-y: #{rem(30)};
+	}
+	.sCatalogBody__card-wrap {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sViewedProduct

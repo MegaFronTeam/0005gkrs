@@ -1,0 +1,18 @@
+mixin sGetMore(data)
+	// start sGetMore
+	+b.SECTION.sGetMore.section#sGetMore&attributes(attributes)
+		.container
+			+e.wrap
+				+e.inner
+					+b.section-title.text-center
+						h2 С&nbsp;этим товаром часто покупают
+					+e.slider--js.swiper
+						.swiper-wrapper
+							.swiper-slide
+								+sCatalogBody-item('2','Венок с&nbsp;живыми цветами белый','1.6')
+							.swiper-slide
+								+sCatalogBody-item()
+							.swiper-slide
+								+sCatalogBody-item()
+					+arrow()
+	// end sGetMore

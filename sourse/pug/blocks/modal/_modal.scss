@@ -11,22 +11,60 @@
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	width: rem(512);
+	border-radius: $border-radius;
 	// min-height: 100%; 
-	padding: 40px;
-
+	padding: rem(67) rem(10) rem(83);
+	
 	.modal-content {
-		// max-width: 485px;
 		// padding-right: 40px 15px;
 	}
-
+	.form-wrap {
+		margin: 0 auto;
+		max-width: 372px;
+		&__title {
+			margin-bottom: rem(15);
+			font-weight: 800;
+			font-size: rem(24);
+			text-transform: none;
+		}
+		&__soc-title {
+			margin-bottom: rem(30);
+			font-weight: 600;
+		}
+		.soc {
+			@include roww(10px, m);
+			justify-content: center;
+			align-items: center;
+			&__item {
+				width: rem(38);
+				height: rem(38);
+			}
+		}
+		.soc__item--phone {
+			box-sizing: content-box;
+			background-color: $secondary;
+			border: 5px solid #dde7f7;
+		}
+		.icon {
+			font-size: 20px;
+		}
+		.icon-phone {
+			fill: none;
+			stroke: white;
+			font-size: 20px;
+		}
+	}
 	.mfp-close {
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
 	}
 }
-
+.after-headline {
+	margin-bottom: 0;
+	color: $info;
+}
 a {
 	outline: 0 !important;
 }

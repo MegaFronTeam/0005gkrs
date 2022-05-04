@@ -13,4 +13,12 @@ mixin soc()
 			each soc in social
 				+item-sos(soc)
 
+mixin modalSoc()
+	+b.soc
+		if block
+			block
+		else
+			each soc in social
+				+item-sos(soc)
+
 //- /social buttons 
