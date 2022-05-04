@@ -28,6 +28,7 @@
 			font-size: rem(24);
 			text-transform: none;
 		}
+
 		&__soc-title {
 			margin-bottom: rem(30);
 			font-weight: 600;
@@ -36,6 +37,7 @@
 			@include roww(10px, m);
 			justify-content: center;
 			align-items: center;
+			margin-bottom: rem(20);
 			&__item {
 				width: rem(38);
 				height: rem(38);
@@ -54,6 +56,31 @@
 			stroke: white;
 			font-size: 20px;
 		}
+		&__text {
+			margin: 0 auto;
+			font-size: 14px;
+			max-width: 302px;
+			a {
+				color:$secondary;
+				text-decoration: underline;
+			}
+		}
+		textarea {
+			height: rem(142);
+		}
+	}
+	.form-control {
+		margin: 0 auto rem(16);
+		max-width: 302px;
+		border: none;
+		&::placeholder {
+			text-align: center;
+			font-weight: 600;
+		}
+	}
+	.btn-secondary {
+		margin-bottom: rem(15);
+		width: min(100%, 302px);
 	}
 	.mfp-close {
 		color: $primary;

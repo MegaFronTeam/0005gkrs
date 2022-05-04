@@ -1,7 +1,91 @@
 
 	// start .sContact
 	.sContact {
-		 
+		padding-top: rem(14);
+		padding-bottom: rem(53);
+		.section-title {
+			margin-bottom: rem(30);
+		}
+		&__container {
+			position: relative;
+		}
+		&__map-wrap {
+			@include block(1290, 861);
+			overflow: hidden;
+			background-color: $white;
+			border-radius: 8px;
+			& > * {
+				position: absolute;
+				width: 100% !important;
+				height: 100% !important;
+				top:0;
+				left: 0;
+			}
+		}
+		&__address-wrap {
+			padding: rem(39) rem(49);
+			background-color: $white;
+			border-left: 5px solid $primary;
+			@include media-breakpoint-up(xxl) {
+				position: absolute;
+				bottom: 0;
+				width: 38%;
+				left: 3.5%;
+			}
+			@include media-breakpoint-down(sm) {
+				padding: 10px;
+			}
+		}
+		dl {
+			@include media-breakpoint-down(xxl) {
+				column-count: 2;
+			}
+			@include media-breakpoint-down(sm) {
+				column-count: 1;
+			}
+		}
+		&__dl-group {
+			margin-bottom: rem(30);
+			@include media-breakpoint-down(xxl) {
+				display: inline-block;
+				vertical-align: top;
+				width: 100%;
+				margin-bottom: rem(20);
+			}
+			@include media-breakpoint-down(sm) {
+				column-count: 1;
+				display: block;
+				width: 100%;
+			}
+		}
+		dt {
+			margin-bottom: rem(9);
+			font-weight: 800;
+			font-size: rem(21);
+		}
+		dd {
+			display: flex;
+			flex-wrap: wrap;
+			a {
+				margin-right: 20px;
+				@include media-breakpoint-down(xxl) {
+					width: 100%;
+				}
+			}
+		}
+		.soc {
+			width: 50%;
+			@include media-breakpoint-down(xxl) {
+				order: -1;
+			}
+			&__item {
+				margin-right: 3px;
+				@include media-breakpoint-down(xxl) {
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

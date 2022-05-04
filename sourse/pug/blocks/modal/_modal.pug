@@ -14,10 +14,27 @@ mixin modal()
 						+item-sos('viber')
 						+item-sos('whatsapp')
 						+item-sos('phone')
-					+input('+7 (___) ___-__-__', 'tel')
+					+input('+7 (_ _ _) _ _ _-_ _-_ _', 'tel')
 					button(type="submit").btn.btn-secondary Отправить
 					+e.text Нажимая «Отправить», Вы соглашаетесь с #[a(href="#") политикой конфиденциальности данных].
 
+	div(id="feedback"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				.text-center
+					+e.title.form-data.h3.ttu Есть вопросы?
+					p.after-headline Оставьте контактные данные и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение 10&nbsp;минут.
+					+e.soc-title Способ связи:
+					+modalSoc()
+						+item-sos('telegram')
+						+item-sos('viber')
+						+item-sos('whatsapp')
+						+item-sos('phone')
+					+input('ИМЯ', 'text')
+					+input('+7 (_ _ _) _ _ _-_ _-_ _', 'tel')
+					+input('Оставьте комментарий', 'textarea')
+					button(type="submit").btn.btn-secondary Отправить
+					+e.text Нажимая «Отправить», Вы соглашаетесь с #[a(href="#") политикой конфиденциальности данных].
 	// #modal-call
 	
 	// end modals
