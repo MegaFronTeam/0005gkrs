@@ -33,7 +33,7 @@ block variables
 
 block title
 	- let  title= index.head.title
-	title= 'Гроб лакированный белый'
+	title= 'Контакты'
 block pagecontent
 	//- +mob-mnu()
 	
@@ -41,11 +41,7 @@ block pagecontent
 	+header()
 	+topLine
 	+top-nav()
-	+page-head('Главная', 'Гробы', title)
-	+sProduct()
-	+sGetMore()
-	+sViewedProduct()
-	+sHaveQuestions('Остались вопросы?','true')
+	+page-head('Главная', title)
+	+sContact()
+	+sHaveQuestions('Вызов ритуального агента')
 	+footer()
-
-

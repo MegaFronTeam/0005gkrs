@@ -502,3 +502,23 @@ iframe {
 	color: $info;
 	border: 1px solid $info;
 }
+
+.pagination-wrapper {
+	.page-numbers {
+		justify-content: center;
+		border: none !important;
+		gap: 5px;
+		flex-wrap: wrap;
+	}
+	li {
+		&:last-child {
+			margin-left: 9px;
+		}
+	}
+	a {
+		font-size: rem(13);
+		font-weight: 600;
+		padding: rem(10.3) rem(19);
+		border-radius: 6px;
+	}
+}

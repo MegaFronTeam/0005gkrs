@@ -4,6 +4,7 @@ extends ../layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
+include ../blocks/sHaveQuestions/_sHaveQuestions.pug
 
 block variables
 	- let  mainPage= null 
@@ -21,5 +22,6 @@ block pagecontent
 			mixin btn(id, name)
 				.col-auto.mb-2
 					a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")= name
-			+btn("modal-call", "modal-call")
+			+btn("modal-call", "Вызвать агента")
+			+btn("feedback", "Отправить вопрос")
 

@@ -3,7 +3,7 @@ mixin sProduct(data)
 	+b.SECTION.sProduct.section#sProduct&attributes(attributes)
 		.container
 			.row
-				.col-7
+				.order-2.order-xl-1.col-xl-7
 					+e.sliders-wrap
 						.swiper.product-slider.product-slider--js
 								.swiper-wrapper
@@ -20,7 +20,7 @@ mixin sProduct(data)
 									+img('img/product-thumbs-1.png')
 								.swiper-slide
 									+img('img/product-thumbs-2.png')
-				.col-5
+				.order-1.order-xl-1.col-xl-5
 					+e.descr
 						+e.title.h2.H1 Гроб лакированный белый
 						+e.content

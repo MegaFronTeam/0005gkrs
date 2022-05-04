@@ -77,26 +77,29 @@ $output-bourbon-deprecation-warnings: false;
 		}
 	}
 }
-// @import "./node_modules/bootstrap/scss/pagination";
+@import "./node_modules/bootstrap/scss/pagination";
 
-// .pagination-wrapper ul {
-// 	@extend .pagination;
-// }
+.pagination-wrapper ul {
+	@extend .pagination;
+}
 
-// .pagination-wrapper li .page-numbers {
-// 	@extend .page-link;
-// }
+.pagination-wrapper li .page-numbers {
+	@extend .page-link;
+	color: $info;
+}
 
-// .pagination-wrapper li {
-// 	@extend .page-item;
-
-// 	.current {
-// 		z-index: 1;
-// 		// color: $pagination-active-color;
-// 		// background-color: $pagination-active-bg;
-// 		// border-color: $pagination-active-border-color;
-// 	}
-// }
+.pagination-wrapper li {
+	@extend .page-item;
+	.current {
+		z-index: 1;
+		color: $dark;
+		font-size: rem(13);
+		font-weight: 600;
+		border-radius: 6px;
+		// background-color: $pagination-active-bg;
+		// border-color: $pagination-active-border-color;
+	}
+}
 @import "root";
 @import "base";
 
@@ -133,6 +136,7 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sCatalogBody/_sCatalogBody.scss';
 @import '../pug/blocks/sProduct/_sProduct.scss';
 @import '../pug/blocks/sGetMore/_sGetMore.scss';
+@import '../pug/blocks/sViewedProduct/_sViewedProduct.scss';
 
 @import '../pug/blocks/header/_header.scss';
 @import '../pug/blocks/footer/_footer.scss';

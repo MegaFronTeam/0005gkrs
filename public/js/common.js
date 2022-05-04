@@ -393,12 +393,6 @@ function eventHandler() {
 			prevEl: '.sServicesSlider .swiper-button-prev',
 		},
 		breakpoints: {
-			// 344: {
-			// 	slidesPerView: 2,
-			// },
-			// 576: {
-			// 	slidesPerView: 3,
-			// },
 			768: {
 				slidesPerView: 2,
 			},
@@ -407,6 +401,23 @@ function eventHandler() {
 			},
 			1200: {
 				slidesPerView: 4,
+			},
+		},
+	});
+	const sGetMoreSwiper = new Swiper('.sGetMore__slider--js', {
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 31,
+		navigation: {
+			nextEl: '.sGetMore .swiper-button-next',
+			prevEl: '.sGetMore .swiper-button-prev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
 			},
 		},
 	});
@@ -440,6 +451,7 @@ function eventHandler() {
 
 	$('.sFilter__headline').on('click', function () {
 		$('.sFilter__block').toggleClass('active');
+		$('body').toggleClass('fixed');
 	});
 	let productThumbsSlider = new Swiper(".product-thumbs-slider--js", {
 		spaceBetween: 10,
@@ -456,6 +468,20 @@ function eventHandler() {
 		},
 		thumbs: {
 			swiper:productThumbsSlider,
+		},
+	});
+
+	const sCatalogBodySwiper = new Swiper('.sCatalogBody__slider--js', {
+		slidesPerView: '1',
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.sCatalogBody__slider .swiper-button-next',
+			prevEl: '.sCatalogBody__slider .swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
 		},
 	});
 

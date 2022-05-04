@@ -1,0 +1,16 @@
+mixin sViewedProduct(data)
+	// start sViewedProduct
+	+b.SECTION.sViewedProduct.section#sViewedProduct&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Ранее Вы смотрели				
+			.row
+				.col-xxl-3.col-lg-4.col-md-6
+					+sCatalogBody-item('2','Венок с&nbsp;живыми цветами белый','1.6')
+				.col-xxl-3.col-lg-4.col-md-6
+					+sCatalogBody-item()
+				.col-xxl-3.col-lg-4.col-md-6
+					+sCatalogBody-item()
+				.col-xxl-3.col-lg-4.col-md-6
+					+sCatalogBody-item('2','Венок с&nbsp;живыми цветами белый','1.6')
+	// end sViewedProduct
