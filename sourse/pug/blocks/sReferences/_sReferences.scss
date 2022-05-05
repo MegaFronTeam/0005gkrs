@@ -31,6 +31,7 @@
 	}
 
 	.btn {
+		@extend .btn-secondary;
 		padding: rem(20) rem(60);
 	}
 	@include media-breakpoint-up(xl) {}

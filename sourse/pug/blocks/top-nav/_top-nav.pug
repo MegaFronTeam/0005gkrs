@@ -30,8 +30,8 @@ mixin top-nav()
 							.menu-mobile__inner
 								+menu-toggle()
 								.small.d-block.d-lg-none Ритуальные услуги в&nbsp;Санкт&nbsp;-&nbsp;Петербурге и&nbsp;области
-								+btn('Ритуальные услуги', 'button').btn.btn-primary.d-block.d-lg-none
-								.main-menu.UL.d-block.d-lg-none
+								//- +btn('Ритуальные услуги', 'button').btn.btn-primary.d-block.d-lg-none
+								ul.main-menu.d-block.d-lg-none
 									li
 										a(href="#").small О компании
 									li
@@ -42,7 +42,7 @@ mixin top-nav()
 										a(href="#").small Пособия
 									li
 										a(href="#").small Контакты
-								.action(href="#").d-block.d-lg-none Что делать, если умер близкий человек
+								a.action(href="#").d-block.d-lg-none Что делать, если умер близкий человек
 								+mnu()
 								+btn('Перезвоните мне').btn.btn-sm.btn-outline-secondary.d-block.d-lg-none
 					.col-auto.d-lg-none

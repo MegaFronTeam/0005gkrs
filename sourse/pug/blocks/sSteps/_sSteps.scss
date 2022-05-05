@@ -14,7 +14,7 @@
 	}
 
 	.row {
-		margin-bottom: rem(118);
+		// margin-bottom: rem(118);
 		--bs-gutter-y: #{rem(60)};
 		@include media-breakpoint-up(md) {
 			--bs-gutter-y: #{rem(40)}
@@ -30,65 +30,64 @@
 } // end.sSteps
 
 .step-item {
-	position: relative;
+	--imgH: 294px;
+	--imgH2: 182px;
+	@include mt;
+	// position: relative;
 	text-align: center;
 	&:hover {
-		.step-item__text {
-			top: 0;
-			height: 100%;
-			opacity: .8;
-			@include media-breakpoint-up(md) {
-				top: 50%;
-				height: auto;
-				bottom:0;
-				opacity: 1;
-			}
-			@include media-breakpoint-up(lg) {
-				top: 68%;
-			}
+		--imgMinus: calc(var(--imgH) - var(--imgH2));
+		--opacity: 1;
+		--imgHBase: var(--imgH2);
+		// .step-item__text {
+		// 	top: 0;
+		// 	height: 100%;
+		// 	opacity: .8;
+			// @include media-breakpoint-up(md) {
+			// 	top: 50%;
+			// 	height: auto;
+			// 	bottom:0;
+			// 	opacity: 1;
+			// }
+			// @include media-breakpoint-up(lg) {
+			// 	top: 68%;
+			// }
 		}
-		.step-item__descr {
-			display: block;
-			transform: translateY(0);
-		}
+		// .step-item__descr {
+		// 	display: block;
+		// 	transform: translateY(0);
+		// }
 	}
 	&__img-wrap {
-		margin-bottom: rem(23);
-		@include block(300, 294);
-		&::after {
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			counter-increment: steps;
-			content: counter(steps);
-			font-weight: 800;
-			font-size: rem(190);
-			line-height: rem(146);
-			z-index: 5;
-			color: $body-bg;
-		}
+		margin-bottom: rem(23.729);
+		// margin-bottom: rem(23.729);
+		overflow: hidden;
+		height: var(--imgH);
+		// &::after {
+		// 	position: absolute;
+		// 	bottom: 0;
+		// 	left: 50%;
+		// 	transform: translateX(-50%);
+		// 	counter-increment: steps;
+		// 	content: counter(steps);
+		// 	font-weight: 800;
+		// 	font-size: rem(190);
+		// 	line-height: rem(146);
+		// 	z-index: 5;
+		// 	color: $body-bg;
+		// }
 	}
 	img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		max-width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: $border-radius;
+		@include mt;
+		height: var(--imgHBase, var(--imgH));
+		border-radius: 8px;
+		transform-origin: top;
 	}
 	&__text {
 		background-color: $body-bg;
-		position: absolute;
-		width: 100%;
-		left: 50%;
-		top: 104%;
-		transform: translateX(-50%);
+		position: relative;
+		transform: translateY(calc(var(--imgMinus, 0) * -1));
 		@include mt;
-		z-index: 10;
 	}
 	&__title {
 		padding: rem(10) 0;
@@ -100,8 +99,8 @@
 	}
 	& .step-item__descr {
 		font-size: 16px;
-		display: none;
+	// 	display: none;
 		// transform: translateY(-10px);
-		@include mt;
+		// @include mt;
 	}
 }
