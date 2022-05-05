@@ -90,6 +90,7 @@
 					font-size: 16px;
 				}
 			}
+
 		}
 
 		&__footer {
@@ -99,7 +100,7 @@
 				align-items: baseline;
 				justify-content: flex-end;
 			}
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(xl) {
 				align-items: center;
 				justify-content: space-between;
 			}
@@ -118,7 +119,7 @@
 		}
 
 		&__footer-tel {
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-down(xl) {
 				padding-left: 0;
 			}
 			a {
@@ -174,9 +175,16 @@
 			box-sizing: content-box;
 			background-color: $secondary;
 			border: 5px solid #dde7f7;
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-down(xl) {
 				width: 36px;
 				height: 36px;
+			}
+			@include media-breakpoint-down(sm) {
+				width: 25px;
+				height: 25px;
+				.icon {
+					font-size: 16px;
+				}
 			}
 		}
 		.icon-phone {
@@ -185,17 +193,24 @@
 			font-size: 20px;
 		}
 		&__soc-col {
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-down(xl) {
 				padding-right: 0;
 			}
 		}
 		.soc {
 			&__item {
-				@include media-breakpoint-down(lg) {
+				@include media-breakpoint-down(xl) {
 					width: 36px;
 					height: 36px;
 					.icon {
 						font-size: 20px;
+					}
+				}
+				@include media-breakpoint-down(sm) {
+					width: 25px;
+					height: 25px;
+					.icon {
+						font-size: 16px;
 					}
 				}
 			}

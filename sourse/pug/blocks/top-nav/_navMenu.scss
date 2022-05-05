@@ -3,12 +3,16 @@
 
 		display: flex;
 		text-align: center;
-		margin-left: 30px;
+		margin-left: 0 !important;
 		flex-wrap: wrap;
 	}
 	@include media-breakpoint-up(xxl) {
 		// justify-content: flex-end;
 		@include roww(34px);
+	}
+	@include media-breakpoint-up(xl) {
+		// justify-content: flex-end;
+		@include roww(20px);
 	}
 
 	list-style: none;
@@ -30,7 +34,11 @@
 	}
 }
 
-
+.burger-col {
+	@include media-breakpoint-down(sm) {
+		order: 1;
+	}
+}
 
 .toggle-menu-mobile {
 	--h: #{em(2)};
@@ -39,7 +47,7 @@
 	&.on span {
 		--color: transparent;
 	}
-
+	
 	&.on  { 
 		--position: 0; 
 		--rotate: 45deg;
@@ -59,6 +67,7 @@
 	span {
 		@include a-cent(y);
 		display: block;
+		margin-bottom: 0;
 	}
 
 	span:before { 
@@ -185,6 +194,35 @@
 	}
 }
 .menu-item-has-children {
-	@extend .btn-primary;
-	border-radius: $border-radius;
+	position: relative;
+	color: $body-color;
+	@include media-breakpoint-up(xl) {
+		color: $white;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-transform: none;
+	}
+	&:hover {
+	.sub-menu {
+			display: block;
+		}	
+	}
+	& > a {
+		color: $body-color;
+		@include media-breakpoint-up(xl) {
+			margin-left: 0;
+			border-radius: $border-radius;
+			background-image: url('../img/btn-arrow.svg');
+			background-repeat: no-repeat;
+			background-position:93%;
+			background-repeat: no-repeat;
+			background-color: $primary;
+			padding: rem(13) rem(30) rem(13) rem(10);
+			color: $white;
+		}
+		@include media-breakpoint-up(xxl) {
+			width: 265px;
+			padding: rem(13) rem(43) rem(13) rem(8);
+		}
+	}
 }

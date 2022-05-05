@@ -10,25 +10,19 @@
 	}
 	&__container {
 		// padding-top: 6px;
-		padding-bottom: 3px;
-		border-top: 1px solid rgba($info, 0.2);
-		border-bottom: 1px solid rgba($info, 0.2);
+		@include media-breakpoint-down(xl) {
+			padding-bottom: 3px;
+		}
+		@include media-breakpoint-up(xl) {
+			border-top: 1px solid rgba($info, 0.2);
+			border-bottom: 1px solid rgba($info, 0.2);
+		}
 	}
 
 	.row {
 		align-items: center;
 	}
 
-	button {
-		display: flex;
-		justify-content: flex-start;
-		padding: rem(13) rem(43) rem(13) rem(8);
-		background-image: url('../img/btn-arrow.svg');
-		background-repeat: no-repeat;
-		background-position: 95% center;
-		text-transform: none;
-		width: 125%;
-	}
 	@include media-breakpoint-up(xl) {
 		// background-color: #000;
 		// border: 1px solid #000;
@@ -73,52 +67,26 @@
 
 	@include media-breakpoint-down(xs) {}
 }
-.sub-menu{
-	transform-origin: top;
-	transform: scaleY(var(1, 0));	
-	padding: rem(12) rem(10);
-	background-color: $white;
-	list-style: none;
-	position: absolute;
-	top: 231%;
-	left: rem(-10);
-	width: auto;
-	height: auto;
-	@include media-breakpoint-up(lg) {
-		@include mt();
-	}
-	@include media-breakpoint-down(lg) {
-		display: none;
+.sub-menu {	
+	@include media-breakpoint-up(xl) {
 		background-color: $white;
-		top: 0;
-		opacity: 1;
-		left: 0;
-		padding-top: 0;
-	}
-	.menu-item{
-		margin-bottom: rem(3);
-		display: block;
-		&:last-child{
-			margin-bottom: 0;
-		}
-	}
-	a{
-		padding: rem(8);
-		white-space: nowrap;
+		width: 100%;
+		border-radius: $border-radius;
+		position: absolute;
 		text-align: left;
-		color: $body-color;
-		&:hover {
-			color: rgba(77,184,72,1) ;
-		}
+		z-index: 500;
+		display: none;		
 	}
-	@include media-breakpoint-down(lg) {
-		position: relative;
-		order: 10;
-		&.active {
-			display: block;
-			--sub-mnu-scale: 1;
+	a {
+		padding: 10px !important;
+		padding-bottom: 20px !important;
+		@include media-breakpoint-down(xl) {
+			margin-left: 13px;
+			color: $info;
+			padding: 5px !important;
 		}
 	}
 }
+	
 
 
