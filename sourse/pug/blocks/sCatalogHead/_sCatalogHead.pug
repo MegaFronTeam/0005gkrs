@@ -1,7 +1,8 @@
 mixin servicesItem(icon, title)
 	.col-xl-6
 		a(href="#")
-			+icon(icon)
+			//- +icon(icon)
+			+img(`img/svg/${icon}.svg`)
 			+e.text-wrap
 				h6!= title
 				p Цена от #[span 000] руб.
