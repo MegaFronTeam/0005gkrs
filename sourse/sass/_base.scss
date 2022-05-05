@@ -259,6 +259,7 @@ ul {
 }
 .tabs {
 	&__btn {
+		width: max-content;
 		&:hover {
 			cursor: pointer;
 		}
@@ -268,11 +269,11 @@ ul {
 	}
 
 	&__content {
-		opacity: 0;
-		@include mt;
+		// opacity: 0;
+		// @include mt;
 		&.active {
 			display: block;
-			opacity: 1;
+			// opacity: 1;
 		}
 
 		display: none;
@@ -535,7 +536,7 @@ iframe {
 		font-size: rem(24);
 	}
 	&:hover {
-		background-color: #AAAEBE;
+		background-color: $blue;
 		color: $white;
 	}
 }

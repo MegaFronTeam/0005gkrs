@@ -35,7 +35,7 @@
 			}
 			&__title-wrap {
 				display: flex;
-				align-items: flex-end;
+				align-items: baseline;
 				gap: rem(26);
 				margin-bottom: rem(30);
 				h1 {
@@ -77,10 +77,21 @@
 		@include media-breakpoint-down(md) {
 			padding: rem(22) rem(15) rem(19) rem(15);
 		}
-		.icon {
+		&:hover {
+			svg {
+				path {
+					fill: $blue;
+				}
+				color: $blue;
+			}
+		}
+		svg {
 			font-size: rem(48);
 			min-width: rem(39);
 			margin-right: rem(30);
+			path {
+				@include mt;
+			}
 		}
 		&:hover {
 			color: $blue;

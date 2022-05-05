@@ -365,7 +365,7 @@ function eventHandler() {
 	// modal window
 
 	const sOurFacesSwiper = new Swiper('.sOurFaces__slider--js', {
-		slidesPerView: 1,
+		slidesPerView: 'auto',
 		loop: true,
 		spaceBetween: 31,
 		navigation: {
@@ -373,7 +373,7 @@ function eventHandler() {
 			prevEl: '.swiper-button-prev',
 		},
 		breakpoints: {
-			344: {
+			370: {
 				slidesPerView: 2,
 			},
 			576: {
@@ -493,13 +493,38 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
-
+	
 	$('.btn-show-more').click(function() {
 		$('.sCatalogBody__col-types--js:hidden').slideDown(function() {
 			$(this).addClass('active');
 		});
 		$('.btn-show-more').addClass('hidden');
 	});
+	
+	const TabsSlider = new Swiper(".tabs", {
+		slidesPerView: 'auto',
+	});
+
+	const convertImages = (query, callback) => {
+		const images = document.querySelectorAll(query);
+	
+		images.forEach(image => {
+			fetch(image.src)
+			.then(res => res.text())
+			.then(data => {
+				const parser = new DOMParser();
+				const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+	
+				if (image.id) svg.id = image.id;
+				if (image.className) svg.classList = image.classList;
+	
+				image.parentNode.replaceChild(svg, image);
+			})
+			.then(callback)
+			.catch(error => console.error(error))
+		});
+	}
+	convertImages(".list-of-services img");
 
 };
 if (document.readyState !== 'loading') {

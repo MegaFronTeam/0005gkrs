@@ -42,12 +42,15 @@
 	.dd-group {
 		margin-bottom: rem(40);
 		&__item {
+			.icon {
+				transform: rotate(180deg);
+			}
 			&.active {
 				// .dd-group__content {
-				// 	display: block;
-				// }
+					// 	display: block;
+					// }
 				.icon {
-					transform: rotate(180deg);
+					transform: rotate(0);
 				}
 			}
 		}
@@ -87,6 +90,8 @@
 		}
 		.custom-input {
 			cursor: pointer;
+			padding-left: rem(38);
+			position: relative;
 			&:not(:last-child) {
 				margin-bottom: rem(15);
 			}
@@ -96,14 +101,21 @@
 				height: rem(24);
 				margin-top: 0;
 				border: none;
+				position: absolute;
+    		left: 0;
+				margin-left: 0;
 				&:not(:checked) {
 					background-color: #fff;
 				}
 			}
 			&__text {
-				padding-left: rem(18);
+				// padding-left: rem(18);
 			}
 		}
+	}
+	.form-check-input:checked[type=checkbox] {
+		background-image: url('../img/svg/w-check.svg');
+		background-size: 50%;
 	}
 	.irs {
 		&-bar {

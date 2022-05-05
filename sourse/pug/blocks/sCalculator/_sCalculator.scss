@@ -55,6 +55,7 @@
 		color: $info;
 		background-color: #fff;
 		border: none;
+		background-position: right 1.376471rem center;
 		&:active, &:focus {
 			background-color: #fff;
 			color: $info;
@@ -67,16 +68,16 @@
 	&__select-wrap {
 		position: relative;
 		color: $dark;
-		.icon {
-			transform: rotate(180deg);
-			position: absolute;
-			right: rem(11.500);
-			bottom: rem(18);
-			font-size: rem(27.4);
-			fill: none;
-			stroke: currentColor;
-			stroke-width: 2px;
-		}
+		// .icon {
+		// 	transform: rotate(180deg);
+		// 	position: absolute;
+		// 	right: rem(11.500);
+		// 	bottom: rem(18);
+		// 	font-size: rem(27.4);
+		// 	fill: none;
+		// 	stroke: currentColor;
+		// 	stroke-width: 2px;
+		// }
 	}
 	&__result {
 		p {
@@ -120,7 +121,7 @@
 					max-width: 300px;
 				}
 			}
-			button {
+			&__button {
 				width: 100%;
 				max-width: 300px;
 			}

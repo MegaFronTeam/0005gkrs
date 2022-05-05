@@ -27,10 +27,10 @@
 		list-style-type: none;
 		margin-bottom: 0;
 		li {
-			display: flex;
-			align-items: flex-start;
-			flex-direction: column;
+			// align-items: flex-start;
+			// flex-direction: column;
 			@include media-breakpoint-up(md) {
+				display: flex;
 				flex-direction: row;
 				align-items: center;
 			}
@@ -64,6 +64,7 @@
     align-items: center;
     justify-content: center;
 		margin-bottom: rem(15);
+		width: max-content;
 		@include media-breakpoint-up(md) {
 			margin-bottom: 0;
 			&:before {

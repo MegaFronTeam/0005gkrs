@@ -118,6 +118,13 @@
 .page-head {
 	padding-top: rem(20);
 	padding-bottom: rem(31);
+	.section-title {
+		margin-bottom: 0;
+		padding-top: rem(35);
+		h1 {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .breadcrumb {

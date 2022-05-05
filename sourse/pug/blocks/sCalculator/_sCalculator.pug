@@ -1,19 +1,19 @@
 mixin calculatorItem(title)
 	.col-md-6.col-lg-4 
 		+e.select-wrap
-			+select(title, 'Не выбрано', '1', '2', '3', '4')
-			+icon('dd-arrow-up')
+			+select(title, 'Не выбрано', '1', '2', '3', '4').form-select
+			//- +icon('dd-arrow-up')
 
 mixin sCalculator(data)
 	// start sCalculator
 	+b.SECTION.sCalculator.section#sCalculator&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h1 Калькулятор стоимости ритуальных услуг
-			.tabs
-				.tabs__caption
-					.tabs__btn.active Погребение
-					.tabs__btn Кремация
+			//- +b.section-title.text-center
+			//- 	h1 Калькулятор стоимости ритуальных услуг
+			.tabs.swiper
+				.tabs__caption.swiper-wrapper
+					.tabs__btn.swiper-slide.active Погребение
+					.tabs__btn.swiper-slide Кремация
 				.tabs__content.active
 					+e.text Расчет стоимости погребения
 					+e.wrap
@@ -69,5 +69,5 @@ mixin sCalculator(data)
 				+form-wrap()
 					+input('имя', 'text')
 					+input('+7 (___) ___-__-__', 'tel')
-					button(type="submit").btn.btn-secondary Оформить заказ
+					+e.button.BUTTON(type="submit").btn.btn-secondary Оформить заказ
 	// end sCalculator

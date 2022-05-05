@@ -36,6 +36,11 @@
 		}
 	}
 	.swiper-button-hand {
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 0;
+			bottom: -45px;
+
+		}
 		&-next {
 			right: 20px;
 		}

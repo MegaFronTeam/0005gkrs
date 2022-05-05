@@ -29,7 +29,10 @@ mixin addblock()
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
 
-mixin page-head(...items)
+mixin page-head(articles, ...items)
 	+b.page-head
 		.container
 			+breadcrumb(...items)
+			if articles
+				+b.section-title.text-center
+					h1!= articles
