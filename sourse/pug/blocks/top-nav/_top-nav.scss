@@ -1,7 +1,7 @@
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	// 
-	@include media-breakpoint-down(lg) {
+	@include media-breakpoint-down(xl) {
 		// position: fixed;
 		// bottom: 0;
 		// width: 100%;
@@ -72,6 +72,53 @@
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+}
+.sub-menu{
+	transform-origin: top;
+	transform: scaleY(var(1, 0));	
+	padding: rem(12) rem(10);
+	background-color: $white;
+	list-style: none;
+	position: absolute;
+	top: 231%;
+	left: rem(-10);
+	width: auto;
+	height: auto;
+	@include media-breakpoint-up(lg) {
+		@include mt();
+	}
+	@include media-breakpoint-down(lg) {
+		display: none;
+		background-color: $white;
+		top: 0;
+		opacity: 1;
+		left: 0;
+		padding-top: 0;
+	}
+	.menu-item{
+		margin-bottom: rem(3);
+		display: block;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	a{
+		padding: rem(8);
+		white-space: nowrap;
+		text-align: left;
+		color: $body-color;
+		&:hover {
+			color: rgba(77,184,72,1) ;
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		position: relative;
+		order: 10;
+		&.active {
+			display: block;
+			--sub-mnu-scale: 1;
+		}
+	}
 }
 
 

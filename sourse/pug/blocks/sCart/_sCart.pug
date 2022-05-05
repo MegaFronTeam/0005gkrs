@@ -45,18 +45,19 @@ mixin sCart(data)
 							+in-c('radio','Картой сейчас','payment')(checked)
 							+in-c('radio','Картой при получении','payment')
 							+in-c('radio','Наличными при получении','payment')
-				.col-md-5.col-xl-3
-					+e.table-wrap--right
-						table
-							tbody
-								tr
-									th Стоимость
-									td 24 000 &#8381;
-								tr
-									th Доставка
-									td 500 &#8381;
-								+e.summary.TR
-									th итого
-									td 24 500 &#8381;
-					+btn('Совершить заказ','button').btn.btn-secondary
+				.col-md-5.col-xl-3.sticky-container
+					.sticky-table--js
+						+e.table-wrap--right
+							table
+								tbody
+									tr
+										th Стоимость
+										td 24 000 &#8381;
+									tr
+										th Доставка
+										td 500 &#8381;
+									+e.summary.TR
+										th итого
+										td 24 500 &#8381;
+						+btn('Совершить заказ','button').btn.btn-secondary
 	// end sCart

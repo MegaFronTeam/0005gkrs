@@ -39,6 +39,11 @@
 		font-size: 12px;
 		border: 2px solid $body-bg;
 	}
+	&__arrow-wrap {
+		position: relative;
+		margin: 0 auto;
+		max-width: 1486px;
+	}
 	.swiper-button-hand {
 		// color: #AAAEBE;
 		// border: none;
@@ -49,10 +54,10 @@
 		// justify-content: center;
 		top: 75px;
 		&-next {
-			right: -52px;
+			right: 20px;
 		}
 		&-prev {
-			left: -52px;
+			left: 20px;
 		}
 	}
 	&--2 {

@@ -10,6 +10,9 @@
 		padding: rem(25) rem(31) rem(31);
 		background-color: $white;
 		border-radius: $border-radius;
+		@include media-breakpoint-down(sm) {
+			padding: 10px 20px;
+		}
 	}
 	&__table-wrap {
 		max-width: 878px;
@@ -24,7 +27,7 @@
 	}
 	thead {
 		border-bottom: 2px solid $primary;
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(xl) {
 			display: none;
 		}
 	}
@@ -114,6 +117,9 @@
 			padding-top: rem(17);
 			padding-bottom: rem(12);
 			font-size: rem(28);
+			@include media-breakpoint-down(xxl) {
+				font-size: rem(24);
+			}
 		}
 	}
 	&__btn {
@@ -129,7 +135,7 @@
 } // end.sCart
 
 .basket-item {
-	@include media-breakpoint-down(lg) {
+	@include media-breakpoint-down(xl) {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -139,43 +145,47 @@
 		}
 	}
 	&__title {
+		// @include media-breakpoint-down(xl) {
+		// 	width: 50%;
+		// }
 		@include media-breakpoint-down(xl) {
-			width: 30%;
-		}
-		@include media-breakpoint-down(lg) {
 			width: 100%;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 15px;
 		}
 	}
 	&__link {
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(xl) {
 			display: flex;
 			align-items: center;
 		}
 	}
 	&__amount {
+		// @include media-breakpoint-down(xl) {
+		// 	width: 100%;
+		// }
 		@include media-breakpoint-down(xl) {
-			width: 100%;
-		}
-		@include media-breakpoint-down(lg) {
 			width:33%;
 		}
 	}
 	&__price,
 	&__value {
-		position: relative;
+		position: relative;		
 		@include media-breakpoint-down(xl) {
-			width: 20%;
-		}
-		@include media-breakpoint-down(lg) {
 			width:33%;
 		}
+		@include media-breakpoint-down(sm) {
+			width:50%;
+		}
 		&:before {
-			@include media-breakpoint-down(lg){
+			@include media-breakpoint-down(xl){
 				content: attr(data-label);
 				// float: left;
 				position: absolute;
 				text-transform: uppercase;
 				top: -5px;
+				right: 0;
 				font-weight: bold;
 				font-size: 12px;
 				color: $info;
@@ -183,17 +193,34 @@
 		}
 	}
 	&__price {
+		@include media-breakpoint-down(sm) {
+			order: 1;
+		}
 		&:before {
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-down(xl) {
 				left: 0;
 			}
 		}
 	}
+	&__value {
+		@include media-breakpoint-down(sm) {
+			order: 2;
+		}
+	}
 	&__amount {
+		@include media-breakpoint-down(sm) {
+			order: 3;
+			width: 100%;
+		}
 		&:before {
-			@include media-breakpoint-down(lg) {
+			@include media-breakpoint-down(xl) {
 				right: 0;
 			}
+		}
+	}
+	.addBlock {
+		@media (max-width: 440px) {
+			max-width: none;
 		}
 	}
 	tr:not(:last-child) {
@@ -208,11 +235,11 @@
 	&__img-wrap, &__name {
 		display: inline-block;
 	}
-	&__name {
-		@include media-breakpoint-down(xl) {
-			width: 70%;
-		}
-	}
+	// &__name {
+	// 	@include media-breakpoint-down(xl) {
+	// 		width: 70%;
+	// 	}
+	// }
 	&__img-wrap {
 		margin-right: 10px;
 		max-width: 60px;

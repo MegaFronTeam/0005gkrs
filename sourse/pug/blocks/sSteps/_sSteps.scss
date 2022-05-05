@@ -2,7 +2,6 @@
 .sSteps {
 	--sPT: #{rem(14)};
 	--sPB: #{rem(100)};
-	// --sTPB: #{rem(34)};
 	counter-reset: steps;
 	.section-title {
 		margin-bottom: 34px;
@@ -12,9 +11,7 @@
 		text-align: center;
 		font-size: rem(19);
 	}
-
 	.row {
-		// margin-bottom: rem(118);
 		--bs-gutter-y: #{rem(60)};
 		@include media-breakpoint-up(md) {
 			--bs-gutter-y: #{rem(40)}
@@ -33,7 +30,6 @@
 	--imgH: 294px;
 	--imgH2: 182px;
 	@include mt;
-	// position: relative;
 	text-align: center;
 	&:hover {
 		--imgMinus: calc(var(--imgH) - var(--imgH2));
@@ -57,7 +53,6 @@
 		// 	display: block;
 		// 	transform: translateY(0);
 		// }
-	}
 	&__img-wrap {
 		margin-bottom: rem(23.729);
 		// margin-bottom: rem(23.729);

@@ -1,5 +1,5 @@
 .menu{
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
 
 		display: flex;
 		text-align: center;
@@ -7,7 +7,7 @@
 		flex-wrap: wrap;
 	}
 	@include media-breakpoint-up(xxl) {
-		justify-content: flex-end;
+		// justify-content: flex-end;
 		@include roww(34px);
 	}
 
@@ -82,7 +82,7 @@
 		transform-origin: 50% 50%;
 	} 
 }
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(xl) {
 
 	
 
@@ -183,4 +183,8 @@
 			}
 		}
 	}
+}
+.menu-item-has-children {
+	@extend .btn-primary;
+	border-radius: $border-radius;
 }

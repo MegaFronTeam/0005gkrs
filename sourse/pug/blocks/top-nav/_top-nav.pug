@@ -1,5 +1,5 @@
 mixin menu-toggle()
-	+b.toggle-menu-mobile--js.d-lg-none
+	+b.toggle-menu-mobile--js.d-xl-none
 		span
 mixin mob-mnu()
 	-
@@ -23,15 +23,15 @@ mixin top-nav()
 		.container
 			+e.container
 				.row
-					.col-auto
-						+btn('Ритуальные услуги', 'button').btn.btn-primary.d-none.d-lg-block
-					.col.order-lg-0.order-last
+					//- .col-auto
+					//- 	+btn('Ритуальные услуги', 'button').btn.btn-primary.d-none.d-xl-block
+					.col.order-xl-0.order-last
 						.menu-mobile.menu-mobile--js
 							.menu-mobile__inner
 								+menu-toggle()
-								.small.d-block.d-lg-none Ритуальные услуги в&nbsp;Санкт&nbsp;-&nbsp;Петербурге и&nbsp;области
-								//- +btn('Ритуальные услуги', 'button').btn.btn-primary.d-block.d-lg-none
-								ul.main-menu.d-block.d-lg-none
+								.small.d-block.d-xl-none Ритуальные услуги в&nbsp;Санкт&nbsp;-&nbsp;Петербурге и&nbsp;области
+								//- +btn('Ритуальные услуги', 'button').btn.btn-primary.d-block.d-xl-none
+								ul.main-menu.d-block.d-xl-none
 									li
 										a(href="#").small О компании
 									li
@@ -42,9 +42,9 @@ mixin top-nav()
 										a(href="#").small Пособия
 									li
 										a(href="#").small Контакты
-								a.action(href="#").d-block.d-lg-none Что делать, если умер близкий человек
+								a.action(href="#").d-block.d-xl-none Что делать, если умер близкий человек
 								+mnu()
-								+btn('Перезвоните мне').btn.btn-sm.btn-outline-secondary.d-block.d-lg-none
-					.col-auto.d-lg-none
+								+btn('Перезвоните мне').btn.btn-sm.btn-outline-secondary.d-block.d-xl-none
+					.col-auto.d-xl-none
 						+menu-toggle()
 	// end top-nav
