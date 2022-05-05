@@ -1,6 +1,13 @@
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	// 
+	@include media-breakpoint-down(lg) {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		z-index: 10;
+		background-color: $white;
+	}
 	&__container {
 		// padding-top: 6px;
 		padding-bottom: 3px;

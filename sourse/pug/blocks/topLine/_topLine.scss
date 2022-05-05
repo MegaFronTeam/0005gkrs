@@ -125,9 +125,19 @@
 		&__btn {
 			border-width: 2px;
 			font-size: 12px;
+			// @include media-breakpoint-down(lg) {
+			// 	position: fixed;
+			// 	bottom: 0;
+			// 	z-index: 12;
+			// }
 		} 
 
 		&__buttons {
+			// @include media-breakpoint-down(lg) {
+			// 	position: fixed;
+			// 	bottom: 0;
+			// 	z-index: 12;
+			// }
 			button {
 				width: rem(36);
 				height:  rem(36);
@@ -143,6 +153,26 @@
 				max-height: 100%;
 			}
 		}
+		.soc__item--phone {
+			box-sizing: content-box;
+			background-color: $secondary;
+			border: 5px solid #dde7f7;
+		}
+		.icon {
+			font-size: 20px;
+		}
+		.icon-phone {
+			fill: none;
+			stroke: white;
+			font-size: 20px;
+		}
+		// .soc {
+		// 	@include media-breakpoint-down(lg) {
+		// 		position: fixed;
+		// 		bottom: 0;
+		// 		z-index: 12;
+		// 	}
+		// }
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

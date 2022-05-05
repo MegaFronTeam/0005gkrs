@@ -3,13 +3,13 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(34px);
 		flex-wrap: wrap;
+		margin-left: 30px;
+	}
+	@include media-breakpoint-up(xxl) {
+		@include roww(34px);
 		justify-content: flex-end;
 	}
-	// @include media-breakpoint-up(xl) {
-	// 	@include roww(34px);
-	// }
 
 	list-style: none;
 	position: relative;
