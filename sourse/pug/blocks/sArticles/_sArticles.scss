@@ -3,6 +3,9 @@
 	--sPT: #{rem(12.700)};
 	--sPB: #{rem(50)};
 	// --sTPB: ;
+	--imgH: 294;
+	--imgH2: 182;
+	--opacity: 1;
 	.section-title {
 		margin-bottom: rem(30.100);
 		h1 {
@@ -16,7 +19,13 @@
 		@include mt;
 		&:hover{
 			.sArticles__img-wrap {
-				// --ratio: 184/408;
+				--imgPrecent: calc(var(--imgH2) / var(--imgH));
+			}
+			.sArticles__text-wrap {
+				--imgMinus: calc(var(--imgH) - var(--imgH2));
+			}
+			.sArticles__text {
+				opacity: var(--opacity, 0);
 			}
 			h5 {
 				color: $indigo;
@@ -33,15 +42,33 @@
 			margin-bottom: 0;
 		}
 	}
+	&__text {
+		@include mt;
+		color: $info;
+		margin-bottom: 0;
+		opacity: 0;
+		position: absolute;
+		top: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+	}
+	&__text-wrap {
+		@include mt;
+		position: relative;
+		transform: translateY(calc(var(--imgMinus, 0) * -1px));
+	}
 	&__img-wrap {
-		@include block(408, 294);
 		@include mt;
 		margin-bottom: rem(23.729);
+		transform-origin: top;
+		overflow: hidden;
+		border-radius: 8px;
+		transform: scaleY(var(--imgPrecent, 1));
 		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			border-radius: 8px;
+			height: 294px;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

@@ -3,9 +3,10 @@ mixin sArticles-item(img, title)
 		+e.wrap.text-center(href="#")
 			+e.img-wrap
 				+img(`img/sArticles-img-${img}.jpg`, 'bg')
-			h5!= title
-			p 24.11.2020
-			//- p В&nbsp;этой статье мы&nbsp;рассмотрим основные способы погребения людей, особенности захоронений, их&nbsp;достоинства и&nbsp;недостатки, а&nbsp;также среднюю стоимость.
+			+e.text-wrap
+				h5!= title
+				p 24.11.2020
+				+e.text В&nbsp;этой статье мы&nbsp;рассмотрим основные способы погребения людей, особенности захоронений, их&nbsp;достоинства и&nbsp;недостатки, а&nbsp;также среднюю стоимость.
 
 mixin sArticles(data)
 	// start sArticles

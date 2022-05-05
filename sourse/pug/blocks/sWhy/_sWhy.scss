@@ -35,7 +35,12 @@
 		--sPB: #{rem(50)};
 		.sWhy__row {
 			border-radius: 8px;
-			padding-top: rem(77);
+			// padding-top: rem(38);
+		}
+		.why-item:not(:last-child):after {
+			height: 110px;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 	@include media-breakpoint-up(xl) {}
