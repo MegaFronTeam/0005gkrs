@@ -28,7 +28,8 @@ mixin topLine()
 						.col-4.col-sm-auto
 							+soc
 						+e.footer-tel.col-auto
-							a(href="tel:+79111377077") +7-911-137-70-77
+							+item-sos('phone').d-block.d-lg-none
+							a(href="tel:+79111377077").d-none.d-lg-block +7-911-137-70-77
 								.small Работаем круглосуточно
 						.col-auto
 							+btn('Перезвоните мне').btn.btn-sm.btn-outline-secondary
@@ -36,6 +37,6 @@ mixin topLine()
 							button.btn
 								+img('img/topline-search.png')
 							a(href="#")
-								+img('img/topline-cart.png') 
+								+img('img/topline-cart.png')
 
 	// end topLine

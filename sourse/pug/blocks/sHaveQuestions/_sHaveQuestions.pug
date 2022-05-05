@@ -1,14 +1,25 @@
-mixin sHaveQuestions(h2,sponsors)
+mixin sHaveQuestions(h2,sponsors, firstVariant)
 	// start sHaveQuestions
 	+b.SECTION.sHaveQuestions.section#sHaveQuestions&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2!= h2
-				p Оставьте контактные данные и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение 10&nbsp;минут.
-			+form-wrap()
-				+input('+7 (___) ___-__-__', 'tel')
-				button(type="submit").btn.btn-secondary Отправить
-			+e.text Нажимая «Отправить», Вы соглашаетесь с #[a(href="#") политикой конфиденциальности данных].
+			if !firstVariant
+				+b.section-title.text-center
+					h2!= h2
+					p Оставьте контактные данные и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;течение 10&nbsp;минут.
+				+form-wrap()
+					+input('+7 (___) ___-__-__', 'tel')
+					button(type="submit").btn.btn-secondary Отправить
+				+e.text Нажимая «Отправить», Вы соглашаетесь с #[a(href="#") политикой конфиденциальности данных].
+			else
+				+e.wrap
+					+b.section-title.text-center
+						h2!= h2
+						p Оставьте контактные данные и&nbsp;мы&nbsp;подберем для Вас оптимальное решение на&nbsp;любой бюджет.
+					+form-wrap()
+						+input('имя', 'text')
+						+input('+7 (___) ___-__-__', 'tel')
+						button(type="submit").btn.btn-secondary Отправить
+					+e.text Нажимая «Отправить», Вы соглашаетесь с #[a(href="#") политикой конфиденциальности данных].
 			if sponsors
 				+b.sponsors
 					+e.slider--js.swiper

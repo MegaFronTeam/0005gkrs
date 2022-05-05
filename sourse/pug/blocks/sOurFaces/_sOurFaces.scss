@@ -36,20 +36,6 @@
 		}
 	}
 	.swiper-button-hand {
-		color: #AAAEBE;
-		border: none;
-		width: rem(50);
-		height: rem(50);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		.icon {
-			font-size: rem(24);
-		}
-		&:hover {
-			background-color: #AAAEBE;
-			color: $white;
-		}
 		&-next {
 			right: 20px;
 		}

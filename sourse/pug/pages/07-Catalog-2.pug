@@ -22,7 +22,7 @@ include ../blocks/footer/_footer.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '07-Catalog.jpg'
+	- let  bg= ''
 
 block title
 	- let  title= "Каталог"
@@ -34,14 +34,14 @@ block pagecontent
 	+header()
 	+topLine
 	+top-nav()
-	+page-head('Главная', 'Каталог')
-	+sCatalogHead
+	+page-head('Главная', 'Каталог', 'Гробы')
+	+sCatalogHead2
 	.container
 		.row
 			.col-lg-3
 				+sFilter()
 			.col-lg-9
-				+sCatalogBody
+				+sCatalogBody('true')
 	//- +sFuneralServices
 	//- +headerBlock
 	//- +sWhy()

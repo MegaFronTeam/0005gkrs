@@ -96,6 +96,7 @@ $output-bourbon-deprecation-warnings: false;
 		font-size: rem(13);
 		font-weight: 600;
 		border-radius: 6px;
+		padding: rem(11) rem(19) !important;
 		// background-color: $pagination-active-bg;
 		// border-color: $pagination-active-border-color;
 	}
@@ -136,6 +137,9 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sFilter/_sFilter.scss';
 @import '../pug/blocks/sCatalogBody/_sCatalogBody.scss';
 @import '../pug/blocks/sProduct/_sProduct.scss';
+@import '../pug/blocks/sSize/_sSize.scss';
+@import '../pug/blocks/sArticles/_sArticles.scss';
+@import '../pug/blocks/sCalculator/_sCalculator.scss';
 @import '../pug/blocks/sGetMore/_sGetMore.scss';
 @import '../pug/blocks/sViewedProduct/_sViewedProduct.scss';
 

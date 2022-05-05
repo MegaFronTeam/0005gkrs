@@ -27,7 +27,31 @@
 			}
 		}
 	}
-	
+	&--2 {
+		.sCatalogHead {
+			&__wrap {
+				background-color: transparent;
+				padding: 0;
+			}
+			&__title-wrap {
+				display: flex;
+				align-items: flex-end;
+				gap: rem(26);
+				margin-bottom: rem(30);
+				h1 {
+					margin-bottom: 0;
+				}
+				p {
+					color: $info;
+					margin-bottom: 0;
+				}
+			}
+			&__text {
+				font-size: rem(19);
+				color: $info;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

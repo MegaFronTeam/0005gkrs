@@ -3,6 +3,7 @@
 	--sPT: 0;
 	--sPB: 0;
 	// --sTPB: ;
+	padding-bottom: #{rem(50)};
 	&__row {
 		margin-bottom: rem(28);
 	}
@@ -122,20 +123,6 @@
 		position: relative;
 	}
 	.swiper-button-hand {
-		color: #AAAEBE;
-		border: none;
-		width: rem(50);
-		height: rem(50);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		.icon {
-			font-size: rem(24);
-		}
-		&:hover {
-			background-color: #AAAEBE;
-			color: $white;
-		}
 		&-next {
 			right: 0;
 		}
@@ -143,13 +130,52 @@
 			left: 0;
 		}
 	}
+	&__show-more {
+		width: 100%;
+		font-size: rem(12);
+		padding: rem(11);
+	}
+	&__row-types {
+		--bs-gutter-x: #{rem(10)};
+		--bs-gutter-y: var(--bs-gutter-x);
+		margin-bottom: rem(35);
+	}
+	&__col-types {
+		&:nth-child(n + 9) {
+			display: none;
+		}
+		a {
+			padding: rem(8) rem(13.5);
+			color: $info;
+			border-color: rgba(188, 195, 208, 0.5);
+			border-radius: 8px;
+			font-size: rem(12);
+			&:hover, &.active {
+				color: $blue;
+				border-color: $blue;
+			}
+		}
+	}
+	.btn-show-more {
+		&.hidden {
+			display: none;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCatalogBody
 	.swiper-pagination {
 		position: absolute;
 		bottom: rem(19);
 		z-index: 1;
 		display: flex;
-    justify-content: center;
-    align-items: center;
+		justify-content: center;
+		align-items: center;
 		&-bullet {
 			width: 7px;
 			height: 7px;
@@ -162,16 +188,3 @@
 			}
 		}
 	}
-	&__show-more {
-		width: 100%;
-		font-size: rem(12);
-		padding: rem(11);
-	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
-} // end.sCatalogBody
