@@ -15,6 +15,7 @@
 				display: inline-block;
 				text-align: center;
 				margin-bottom: 10px;
+				padding-bottom: 20px;
 			}
 			img {
 				max-width: 100%;
@@ -92,8 +93,16 @@
 		}
 
 		&__footer {
-			justify-content: space-between;
 			--bs-gutter-y: #{rem(15)};
+				align-items: baseline !important;
+			@include media-breakpoint-up(sm) {
+				align-items: baseline;
+				justify-content: flex-end;
+			}
+			@include media-breakpoint-up(lg) {
+				align-items: center;
+				justify-content: space-between;
+			}
 			@include media-breakpoint-up(xxl) {
 				justify-content: flex-start;
 			}
@@ -109,6 +118,9 @@
 		}
 
 		&__footer-tel {
+			@include media-breakpoint-down(lg) {
+				padding-left: 0;
+			}
 			a {
 				position: relative;
 				font-weight: 800;
@@ -133,11 +145,16 @@
 		} 
 
 		&__buttons {
-			// @include media-breakpoint-down(lg) {
-			// 	position: fixed;
-			// 	bottom: 0;
-			// 	z-index: 12;
-			// }
+			@include media-breakpoint-down(sm) {
+				order: 1;
+				width: auto;
+				margin-left: auto;
+			}
+			@include media-breakpoint-down(lg) {
+				order:-1;
+				width: 100%;
+				text-align: right;
+			}
 			button {
 				width: rem(36);
 				height:  rem(36);
@@ -157,22 +174,32 @@
 			box-sizing: content-box;
 			background-color: $secondary;
 			border: 5px solid #dde7f7;
-		}
-		.icon {
-			font-size: 20px;
+			@include media-breakpoint-down(lg) {
+				width: 36px;
+				height: 36px;
+			}
 		}
 		.icon-phone {
 			fill: none;
 			stroke: white;
 			font-size: 20px;
 		}
-		// .soc {
-		// 	@include media-breakpoint-down(lg) {
-		// 		position: fixed;
-		// 		bottom: 0;
-		// 		z-index: 12;
-		// 	}
-		// }
+		&__soc-col {
+			@include media-breakpoint-down(lg) {
+				padding-right: 0;
+			}
+		}
+		.soc {
+			&__item {
+				@include media-breakpoint-down(lg) {
+					width: 36px;
+					height: 36px;
+					.icon {
+						font-size: 20px;
+					}
+				}
+			}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

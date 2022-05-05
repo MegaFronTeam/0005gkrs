@@ -23,14 +23,28 @@ mixin top-nav()
 		.container
 			+e.container
 				.row
-					.col-auto.d-none.d-lg-block
-						+btn('Ритуальные услуги', 'button').btn.btn-primary
+					.col-auto
+						+btn('Ритуальные услуги', 'button').btn.btn-primary.d-none.d-lg-block
 					.col.order-lg-0.order-last
 						.menu-mobile.menu-mobile--js
 							.menu-mobile__inner
 								+menu-toggle()
+								.small.d-block.d-lg-none Ритуальные услуги в&nbsp;Санкт&nbsp;-&nbsp;Петербурге и&nbsp;области
+								+btn('Ритуальные услуги', 'button').btn.btn-primary.d-block.d-lg-none
+								.main-menu.UL.d-block.d-lg-none
+									li
+										a(href="#").small О компании
+									li
+										a(href="#").small Цены
+									li
+										a(href="#").small FAQ
+									li
+										a(href="#").small Пособия
+									li
+										a(href="#").small Контакты
+								.action(href="#").d-block.d-lg-none Что делать, если умер близкий человек
 								+mnu()
-						
+								+btn('Перезвоните мне').btn.btn-sm.btn-outline-secondary.d-block.d-lg-none
 					.col-auto.d-lg-none
 						+menu-toggle()
 	// end top-nav

@@ -26,12 +26,12 @@
 			<div class="topLine section" id="topLine">
 				<div class="container">
 					<div class="row">
-						<div class="topLine__left col-12 col-md-auto">
+						<div class="topLine__left col-12 col-sm-auto">
 							<a class="topLine__logo" href="#"><img src="img/logo.png" alt="" loading="lazy"/>
 							</a>
 						</div>
 						<div class="topLine__right col">
-							<div class="topLine__header row">
+							<div class="topLine__header row d-none d-lg-flex">
 								<div class="col-12 col-xl">
 									<div class="small">Ритуальные услуги в&nbsp;Санкт&nbsp;-&nbsp;Петербурге и&nbsp;области</div>
 								</div>
@@ -46,9 +46,9 @@
 								</div>
 							</div>
 							<div class="topLine__footer row">
-								<div class="topLine__action col-auto"><a href="#">Что делать, если умер близкий человек</a>
+								<div class="topLine__action col-auto d-none d-lg-block"><a href="#">Что делать, если умер близкий человек</a>
 								</div>
-								<div class="col-4 col-sm-auto">
+								<div class="topLine__soc-col col-auto">
 									<div class="soc">
 										<a class="soc__item soc__item soc__item--telegram" href="#" target="_blank">
 											<svg class="icon icon-telegram ">
@@ -68,14 +68,16 @@
 									</div>
 								</div>
 								<div class="topLine__footer-tel col-auto">
-									<a class="topLine__item soc__item soc__item--phone" href="#" target="_blank">
-										<svg class="icon icon-phone ">
-											<use xlink:href="img/svg/sprite.svg#phone"></use>
-										</svg>
-									</a><a class="d-none d-lg-block" href="tel:+79111377077">+7-911-137-70-77
+									<div class="d-block d-lg-none">
+										<a class="topLine__item soc__item soc__item--phone" href="#" target="_blank">
+											<svg class="icon icon-phone ">
+												<use xlink:href="img/svg/sprite.svg#phone"></use>
+											</svg>
+										</a>
+									</div><a class="d-none d-lg-block" href="tel:+79111377077">+7-911-137-70-77
 										<div class="small">Работаем круглосуточно</div></a>
 								</div>
-								<div class="col-auto">
+								<div class="topLine__callback col-auto d-none d-lg-block">
 									<a class="topLine__btn btn btn-sm btn-outline-secondary" href="#">Перезвоните мне
 									</a>
 								</div>
@@ -94,8 +96,8 @@
 				<div class="container">
 					<div class="top-nav__container">
 						<div class="row">
-							<div class="col-auto d-none d-lg-block">
-								<button class="top-nav__btn btn btn-primary" type="button">Ритуальные услуги
+							<div class="col-auto">
+								<button class="top-nav__btn btn btn-primary d-none d-lg-block" type="button">Ритуальные услуги
 								</button>
 							</div>
 							<div class="col order-lg-0 order-last">
@@ -103,6 +105,17 @@
 									<div class="menu-mobile__inner">
 										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 										</div>
+										<div class="small d-block d-lg-none">Ритуальные услуги в&nbsp;Санкт&nbsp;-&nbsp;Петербурге и&nbsp;области</div>
+										<button class="top-nav__btn btn btn-primary d-block d-lg-none" type="button">Ритуальные услуги
+										</button>
+										<div class="main-menu UL d-block d-lg-none">
+											<li><a class="small" href="#">О компании</a></li>
+											<li><a class="small" href="#">Цены</a></li>
+											<li><a class="small" href="#">FAQ</a></li>
+											<li><a class="small" href="#">Пособия</a></li>
+											<li><a class="small" href="#">Контакты</a></li>
+										</div>
+										<div class="action d-block d-lg-none" href="#">Что делать, если умер близкий человек</div>
 										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Кремация</a></li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Погребение</a></li>
@@ -112,6 +125,8 @@
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог</a></li>
 										</ul>
+										<a class="top-nav__btn btn btn-sm btn-outline-secondary d-block d-lg-none" href="#">Перезвоните мне
+										</a>
 									</div>
 								</div>
 							</div>
