@@ -5,8 +5,6 @@
 	// --sTPB: ;
 	--imgH: 294;
 	--imgH2: 182;
-	--imgPrecent: calc(var(--imgH2) / var(--imgH));
-	--imgMinus: calc(var(--imgH) - var(--imgH2));
 	--opacity: 1;
 	.section-title {
 		margin-bottom: rem(30.100);
@@ -21,15 +19,10 @@
 		@include mt;
 		&:hover{
 			.sArticles__img-wrap {
-				transform: scaleY(var(--imgPrecent, 0));
-				img {
-					transform: scaleY(calc(1 + var(--imgPrecent)));
-					transform-origin: top;
-					// height: calc(var(--imgH2) * 1px);
-				}
+				--imgPrecent: calc(var(--imgH2) / var(--imgH));
 			}
 			.sArticles__text-wrap {
-				transform: translateY(calc(var(--imgMinus) * -1px));
+				--imgMinus: calc(var(--imgH) - var(--imgH2));
 			}
 			.sArticles__text {
 				opacity: var(--opacity, 0);
@@ -65,15 +58,17 @@
 	&__text-wrap {
 		@include mt;
 		position: relative;
+		transform: translateY(calc(var(--imgMinus, 0) * -1px));
 	}
 	&__img-wrap {
 		@include mt;
 		margin-bottom: rem(23.729);
 		transform-origin: top;
 		overflow: hidden;
+		border-radius: 8px;
+		transform: scaleY(var(--imgPrecent, 1));
 		img {
-			@include mt;
-			border-radius: 8px;
+			height: 294px;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
