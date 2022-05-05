@@ -26,10 +26,16 @@
 		}
 		ol {
 			margin-bottom: 0;
-			list-style-type: decimal;
+			// list-style-type: decimal;
+			counter-reset: num;
+			padding-left: 0;
 			li {
-				// display: flex;
-				// list-style-type: disc;
+				display: flex;
+				list-style-type: none;
+				&::before {
+					content: counter(num);
+					counter-increment: num;
+				}
 				&:not(:last-child) {
 					margin-bottom: rem(10);
 					@include media-breakpoint-up(lg) {
@@ -43,7 +49,7 @@
 						font-size: rem(16);
 					}
 				}
-				&::marker {
+				&::before {
 					color: $info;
 					font-size: rem(16);
 					font-weight: 800;

@@ -42,12 +42,15 @@
 	.dd-group {
 		margin-bottom: rem(40);
 		&__item {
+			.icon {
+				transform: rotate(180deg);
+			}
 			&.active {
 				// .dd-group__content {
-				// 	display: block;
-				// }
+					// 	display: block;
+					// }
 				.icon {
-					transform: rotate(180deg);
+					transform: rotate(0);
 				}
 			}
 		}
