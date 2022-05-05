@@ -23,7 +23,8 @@
 			.sArticles__img-wrap {
 				transform: scaleY(var(--imgPrecent, 0));
 				img {
-					// transform: scale(0.61);
+					transform: scaleY(calc(1 + var(--imgPrecent)));
+					transform-origin: top;
 					// height: calc(var(--imgH2) * 1px);
 				}
 			}
@@ -69,8 +70,9 @@
 		@include mt;
 		margin-bottom: rem(23.729);
 		transform-origin: top;
+		overflow: hidden;
 		img {
-			// @include mt;
+			@include mt;
 			border-radius: 8px;
 		}
 	}
