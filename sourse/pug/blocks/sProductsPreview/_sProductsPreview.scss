@@ -47,6 +47,10 @@
 	}
 	&__img-wrap {
 		@include block(277, 223);
+		max-width: 298px;
+    max-height: 240px;
+    margin-left: auto;
+    margin-right: auto;
 	}
 	&__wrap-item {
 		height: 100%;
@@ -60,6 +64,7 @@
 		p {
 			font-size: rem(16);
 			margin-bottom: rem(19);
+			color: $info;
 			span {
 				color: $blue;
 				font-weight: 800;
@@ -84,6 +89,7 @@
 		font-weight: 800;
 		margin-bottom: rem(5);
 		margin-top: auto;
+		color: $dark;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

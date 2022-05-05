@@ -26,6 +26,7 @@
 		&__input {
 			background-color: $white;
 			border: none;
+			text-align: center;
 			&::placeholder {
 				text-transform: uppercase;
 				letter-spacing: 0.1em;
@@ -35,12 +36,16 @@
 			}
 			&-wrap {
 				width: 100%;
-    		max-width: 300px;
+				@include media-breakpoint-up(md) {
+					max-width: 300px;
+				}
 			}
 		}
 		&__button {
 			width: 100%;
-    	max-width: 217px;
+			@include media-breakpoint-up(md) {
+				max-width: 217px;
+			}
 		}
 	}
 	&__text {
@@ -84,14 +89,23 @@
 	@include media-breakpoint-up(lg) {
 		margin-top: rem(100);
 	}
+	&__slider {
+		overflow: visible;
+	}
 	&__wrap {
 		background-color: $white;
 		padding: rem(16) 0;
 		border-radius: 8px;
-		max-width: rem(410);
+		max-width: rem(288);
 		height: auto;
 		display: flex;
     justify-content: center;
     align-items: center;
+		@include media-breakpoint-up(xl) {
+			max-width: rem(348);
+		}
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(410);
+		}
 	}
 }

@@ -365,7 +365,7 @@ function eventHandler() {
 	// modal window
 
 	const sOurFacesSwiper = new Swiper('.sOurFaces__slider--js', {
-		slidesPerView: 1,
+		slidesPerView: 'auto',
 		loop: true,
 		spaceBetween: 31,
 		navigation: {
@@ -373,7 +373,7 @@ function eventHandler() {
 			prevEl: '.swiper-button-prev',
 		},
 		breakpoints: {
-			344: {
+			370: {
 				slidesPerView: 2,
 			},
 			576: {
@@ -484,12 +484,16 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
-
+	
 	$('.btn-show-more').click(function() {
 		$('.sCatalogBody__col-types--js:hidden').slideDown(function() {
 			$(this).addClass('active');
 		});
 		$('.btn-show-more').addClass('hidden');
+	});
+	
+	const TabsSlider = new Swiper(".tabs", {
+		slidesPerView: 'auto',
 	});
 
 };
