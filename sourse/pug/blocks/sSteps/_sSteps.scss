@@ -14,7 +14,7 @@
 	.row {
 		--bs-gutter-y: #{rem(60)};
 		@include media-breakpoint-up(md) {
-			--bs-gutter-y: #{rem(40)}
+			--bs-gutter-y: #{rem(40)};
 		}
 	}
 		@include media-breakpoint-up(xl) {}
@@ -58,31 +58,36 @@
 		// margin-bottom: rem(23.729);
 		overflow: hidden;
 		height: var(--imgH);
-		// &::after {
-		// 	position: absolute;
-		// 	bottom: 0;
-		// 	left: 50%;
-		// 	transform: translateX(-50%);
-		// 	counter-increment: steps;
-		// 	content: counter(steps);
-		// 	font-weight: 800;
-		// 	font-size: rem(190);
-		// 	line-height: rem(146);
-		// 	z-index: 5;
-		// 	color: $body-bg;
-		// }
+		position: relative;
+		&::after {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			counter-increment: steps;
+			content: counter(steps);
+			font-weight: 800;
+			font-size: rem(190);
+			line-height: rem(146);
+			z-index: 5;
+			color: $body-bg;
+			z-index: 1;
+		}
 	}
 	img {
 		@include mt;
 		height: var(--imgHBase, var(--imgH));
 		border-radius: 8px;
 		transform-origin: top;
+		width: 100%;
+		object-fit: cover;
 	}
 	&__text {
 		background-color: $body-bg;
 		position: relative;
 		transform: translateY(calc(var(--imgMinus, 0) * -1));
 		@include mt;
+		z-index: 2;
 	}
 	&__title {
 		padding: rem(10) 0;
