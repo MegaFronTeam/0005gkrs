@@ -23,6 +23,12 @@
 		align-items: center;
 	}
 
+	.soc {
+		@include media-breakpoint-up(xl) {
+			display: none;
+		}
+	}
+
 	@include media-breakpoint-up(xl) {
 		// background-color: #000;
 		// border: 1px solid #000;
