@@ -4,15 +4,15 @@ mixin sReferences(data)
 		.container
 			+b.section-title.text-center
 				h2 Справочные данные
-			.tabs
-					.tabs__caption
-						.tabs__btn.active
+			.tabs.swiper
+					.tabs__caption.swiper-wrapper
+						.tabs__btn.swiper-slide.active
 							h5 Морги
-						.tabs__btn
+						.tabs__btn.swiper-slide
 							h5 Кладбища
-						.tabs__btn
+						.tabs__btn.swiper-slide
 							h5 Крематории
-						.tabs__btn
+						.tabs__btn.swiper-slide
 							h5 Колумбарии
 					.tabs__content.active
 						+e.map-wrap

@@ -7,7 +7,9 @@
 			align-items: center;
 		}
 		&__left {
-			padding-right: rem(30);
+			@include media-breakpoint-up(sm) {
+				padding-right: rem(30);
+			}
 		}
 		&__logo {
 			@include media-breakpoint-down(md) {
@@ -19,6 +21,9 @@
 			}
 			img {
 				max-width: 100%;
+				@include media-breakpoint-down(sm) {
+					height: 90px;
+				}
 			}
 		}
 		&__right {

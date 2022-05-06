@@ -41,7 +41,7 @@
 }
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
+	--h: 4px;
 	--color: #{$primary};
 	--position: calc(var(--h) * 2);
 	&.on span {
@@ -129,6 +129,7 @@
 			color: #FFF;
 			top: 10px;
 			z-index: 9999; 
+			height: 4px;
 			span:after,
 			span:before {
 				--color: #ffffff;
