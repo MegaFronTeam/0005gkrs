@@ -18,13 +18,13 @@ mixin sPackages(data)
 					.tabs__content
 						p Погребение
 					.tabs__content.active
-						.tabs-vert.row
-							.tabs-vert__caption.col-12.col-md-4.col-xl-3
-								.tabs-vert__btn
+						.tabs-vert.row.swiper
+							.tabs-vert__caption.col-12.col-md-4.col-xl-3.swiper-wrapper
+								.tabs-vert__btn.swiper-slide
 									+btn('Базовый','button').btn.btn-outline-info
-								.tabs-vert__btn
+								.tabs-vert__btn.swiper-slide
 									+btn('Стандарт','button').btn.btn-outline-info
-								.tabs-vert__btn.active
+								.tabs-vert__btn.swiper-slide.active
 									+btn('Стандарт +','button').btn.btn-outline-info
 							.tabs-vert__content.col
 								p Базовый

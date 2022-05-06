@@ -504,6 +504,17 @@ function eventHandler() {
 	const TabsSlider = new Swiper(".tabs", {
 		slidesPerView: 'auto',
 	});
+	
+	const TabsVertSlider = new Swiper(".tabs-vert", {
+		direction: 'horizontal',
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		breakpoints: {
+			768: {
+				direction: 'vertical',
+			},
+		},
+	});
 
 	const convertImages = (query, callback) => {
 		const images = document.querySelectorAll(query);
