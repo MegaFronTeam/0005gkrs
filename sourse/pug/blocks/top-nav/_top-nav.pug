@@ -29,21 +29,26 @@ mixin top-nav()
 						.menu-mobile.menu-mobile--js
 							.menu-mobile__inner
 								+menu-toggle()
-								.small.d-block.d-xl-none Ритуальные услуги в&nbsp;Санкт&nbsp;-&nbsp;Петербурге и&nbsp;области
+								+mnu()
 								ul.main-menu.d-block.d-xl-none
 									li
-										a(href="#").small О компании
+										a(href="#") О компании
 									li
-										a(href="#").small Цены
+										a(href="#") Цены
 									li
-										a(href="#").small FAQ
+										a(href="#") FAQ
 									li
-										a(href="#").small Пособия
+										a(href="#") Пособия
 									li
-										a(href="#").small Контакты
+										a(href="#") Контакты
+								.small.d-block.d-xl-none Ритуальные услуги в&nbsp;Санкт&nbsp;-&nbsp;Петербурге и&nbsp;области
 								a.action(href="#").d-block.d-xl-none Что делать, если умер близкий человек
-								+mnu()
 								+btn('Перезвоните мне').btn.btn-sm.btn-outline-secondary.d-block.d-xl-none
+								+soc
+									+item-sos('telegram')
+									+item-sos('viber')
+									+item-sos('whatsapp')
+									+item-sos('phone')
 					//- .col-auto.d-xl-none
 					//- 	+menu-toggle()
 	// end top-nav

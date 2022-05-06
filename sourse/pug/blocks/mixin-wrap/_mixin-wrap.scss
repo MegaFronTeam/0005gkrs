@@ -21,6 +21,14 @@
 		&--whatsapp {
 			background-color: #48C95F;
 		}
+		&--phone {
+			background-color: $secondary;
+			.icon {
+				fill: none;
+				stroke: white;
+				font-size: 20px;
+			}
+		}
 		&:hover{
 		 	box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			opacity: .8 ;
