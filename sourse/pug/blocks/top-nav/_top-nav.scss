@@ -84,8 +84,7 @@
 		display: none;		
 	}
 	a {
-		padding: 10px !important;
-		padding-bottom: 20px !important;
+		padding: 10px 20px !important;
 		@include media-breakpoint-down(xl) {
 			margin-left: 13px;
 			color: $info;
