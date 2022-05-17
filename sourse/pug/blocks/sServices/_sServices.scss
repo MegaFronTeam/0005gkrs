@@ -110,6 +110,7 @@
 	}
 }
 .tabs {
+	overflow: visible;
 	margin-bottom: rem(49);
 	&__caption {
 		display: flex;
