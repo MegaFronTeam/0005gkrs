@@ -6,5 +6,6 @@
 6. <https://megafronteam.github.io/0005gkrs/public/06-cart.html>
 7. <https://megafronteam.github.io/0005gkrs/public/07-Catalog.html>
 8. <https://megafronteam.github.io/0005gkrs/public/07-Catalog-2.html>
+8. <https://megafronteam.github.io/0005gkrs/public/09-catalog-item.html>
 9. <https://megafronteam.github.io/0005gkrs/public/11-journal.html>
 10. <https://megafronteam.github.io/0005gkrs/public/12-calculator.html>
